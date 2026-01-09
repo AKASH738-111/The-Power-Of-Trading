@@ -1,345 +1,176 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>The Power Of Trading</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<title>The Power Of Trading</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<!-- Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<!-- Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Poppins', sans-serif;
-            background: #020617;
-            color: #e5e7eb;
-        }
+<style>
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+body{
+    font-family:'Poppins',sans-serif;
+    background:#020617;
+    color:#e5e7eb;
+}
+a{
+    text-decoration:none;
+    color:inherit;
+}
 
-        header {
-            text-align: center;
-            padding: 40px 20px;
-            background: linear-gradient(135deg, #020617, #020617);
-            font-size: 28px;
-            font-weight: 600;
-        }
+/* Layout */
+header{
+    text-align:center;
+    padding:40px 20px;
+    border-bottom:1px solid #1f2933;
+}
+header h1{
+    font-size:30px;
+}
+header p{
+    opacity:.8;
+    margin-top:8px;
+}
 
-        section {
-            padding: 50px 20px;
-        }
+section{
+    padding:50px 20px;
+}
+.container{
+    max-width:1000px;
+    margin:auto;
+}
 
-        .container {
-            max-width: 1000px;
-            margin: auto;
-        }
+.box{
+    background:#020617;
+    border:1px solid #1f2933;
+    border-radius:16px;
+    padding:30px;
+    margin-bottom:30px;
+}
 
-        .box {
-            background: #020617;
-            border: 1px solid #1f2933;
-            border-radius: 15px;
-            padding: 30px;
-            margin-bottom: 30px;
-        }
+h2{
+    color:#22c55e;
+    margin-bottom:10px;
+}
+p{
+    line-height:1.6;
+    opacity:.9;
+}
 
-        h2 {
-            margin-top: 0;
-            color: #22c55e;
-        }
+/* Social Buttons */
+.social-wrap{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    margin-top:25px;
+    flex-wrap:wrap;
+}
+.social-btn{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    padding:14px 26px;
+    border-radius:10px;
+    font-weight:500;
+    transition:0.3s;
+}
+.social-btn i{
+    font-size:18px;
+}
+.youtube{background:#ff0000;color:white;}
+.whatsapp{background:#25D366;color:#020617;}
+.telegram{background:#229ED9;color:white;}
 
-        p {
-            line-height: 1.6;
-            opacity: 0.9;
-        }
+.social-btn:hover{
+    transform:translateY(-3px);
+    opacity:.9;
+}
 
-        .btn {
-            display: inline-block;
-            margin-top: 15px;
-            padding: 12px 25px;
-            border-radius: 8px;
-            background: #22c55e;
-            color: #020617;
-            text-decoration: none;
-            font-weight: 600;
-        }
-
-        .social-buttons {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
-            margin-top: 25px;
-        }
-
-        .social {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            padding: 15px 25px;
-            border-radius: 10px;
-            color: white;
-            text-decoration: none;
-            font-weight: 500;
-        }
-
-        .youtube { background: #ff0000; }
-        .whatsapp { background: #25D366; color: #020617; }
-        .telegram { background: #229ED9; }
-
-        footer {
-            text-align: center;
-            padding: 20px;
-            font-size: 14px;
-            border-top: 1px solid #1f2933;
-            opacity: 0.8;
-        }
-    </style>
+footer{
+    text-align:center;
+    padding:20px;
+    font-size:14px;
+    border-top:1px solid #1f2933;
+    opacity:.8;
+}
+</style>
 </head>
 
 <body>
 
 <header>
-    📈 The Power Of Trading
-    <div style="font-size:14px; opacity:0.8; margin-top:10px;">
-        Discipline • Psychology • Consistency
-    </div>
+    <h1>📈 The Power Of Trading</h1>
+    <p>Discipline • Psychology • Consistency</p>
 </header>
 
 <section>
-    <div class="container">
+<div class="container">
 
-        <!-- HERO -->
-        <div class="box">
-            <h2>Welcome Trader 🚀</h2>
-            <p>
-                Helping traders build a strong mindset, proper risk management,
-                and long-term consistency — no shortcuts, no fake promises.
-            </p>
-        </div>
-
-        <!-- ABOUT -->
-        <div class="box">
-            <h2>About Me</h2>
-            <p>
-                I focus on real market understanding, price action,
-                and disciplined trading.  
-                Trading is a skill, not gambling — and consistency
-                comes from following process, not chasing profits.
-            </p>
-        </div>
-
-        <!-- PHILOSOPHY -->
-        <div class="box">
-            <h2>Trading Philosophy</h2>
-            <p>
-                ✔ Capital protection first<br>
-                ✔ Risk before reward<br>
-                ✔ One trade does not define success<br>
-                ✔ Process > Outcome
-            </p>
-        </div>
-
-        <!-- CONTACT -->
-        <div class="box">
-            <h2>Get Started Today</h2>
-            <p>
-                Ready to start your trading journey?  
-                Contact for learning & guidance.
-            </p>
-            <p>
-                📧 Email: <b>akashmr1111@gmail.com</b><br>
-                📞 WhatsApp: <b>+91-7387347679</b>
-            </p>
-        </div>
-
-        <!-- SOCIAL -->
-        <div class="box" style="text-align:center;">
-            <h2>Connect With Me</h2>
-            <p>Learn trading with discipline, psychology & real analysis</p>
-
-            <div class="social-buttons">
-
-                <a href=<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>The Power Of Trading</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Poppins', sans-serif;
-            background: #020617;
-            color: #e5e7eb;
-        }
-
-        header {
-            text-align: center;
-            padding: 40px 20px;
-            background: linear-gradient(135deg, #020617, #020617);
-            font-size: 28px;
-            font-weight: 600;
-        }
-
-        section {
-            padding: 50px 20px;
-        }
-
-        .container {
-            max-width: 1000px;
-            margin: auto;
-        }
-
-        .box {
-            background: #020617;
-            border: 1px solid #1f2933;
-            border-radius: 15px;
-            padding: 30px;
-            margin-bottom: 30px;
-        }
-
-        h2 {
-            margin-top: 0;
-            color: #22c55e;
-        }
-
-        p {
-            line-height: 1.6;
-            opacity: 0.9;
-        }
-
-        .btn {
-            display: inline-block;
-            margin-top: 15px;
-            padding: 12px 25px;
-            border-radius: 8px;
-            background: #22c55e;
-            color: #020617;
-            text-decoration: none;
-            font-weight: 600;
-        }
-
-        .social-buttons {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
-            margin-top: 25px;
-        }
-
-        .social {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            padding: 15px 25px;
-            border-radius: 10px;
-            color: white;
-            text-decoration: none;
-            font-weight: 500;
-        }
-
-        .youtube { background: #ff0000; }
-        .whatsapp { background: #25D366; color: #020617; }
-        .telegram { background: #229ED9; }
-
-        footer {
-            text-align: center;
-            padding: 20px;
-            font-size: 14px;
-            border-top: 1px solid #1f2933;
-            opacity: 0.8;
-        }
-    </style>
-</head>
-
-<body>
-
-<header>
-    📈 The Power Of Trading
-    <div style="font-size:14px; opacity:0.8; margin-top:10px;">
-        Discipline • Psychology • Consistency
+    <div class="box">
+        <h2>Welcome Trader 🚀</h2>
+        <p>
+            Helping traders build discipline, strong psychology
+            and long-term consistency — no shortcuts, no fake promises.
+        </p>
     </div>
-</header>
 
-<section>
-    <div class="container">
-
-        <!-- HERO -->
-        <div class="box">
-            <h2>Welcome Trader 🚀</h2>
-            <p>
-                Helping traders build a strong mindset, proper risk management,
-                and long-term consistency — no shortcuts, no fake promises.
-            </p>
-        </div>
-
-        <!-- ABOUT -->
-        <div class="box">
-            <h2>About Me</h2>
-            <p>
-                I focus on real market understanding, price action,
-                and disciplined trading.  
-                Trading is a skill, not gambling — and consistency
-                comes from following process, not chasing profits.
-            </p>
-        </div>
-
-        <!-- PHILOSOPHY -->
-        <div class="box">
-            <h2>Trading Philosophy</h2>
-            <p>
-                ✔ Capital protection first<br>
-                ✔ Risk before reward<br>
-                ✔ One trade does not define success<br>
-                ✔ Process > Outcome
-            </p>
-        </div>
-
-        <!-- CONTACT -->
-        <div class="box">
-            <h2>Get Started Today</h2>
-            <p>
-                Ready to start your trading journey?  
-                Contact for learning & guidance.
-            </p>
-            <p>
-                📧 Email: <b>akashmr1111@gmail.com</b><br>
-                📞 WhatsApp: <b>+91-7387347679</b>
-            </p>
-        </div>
-
-        <!-- SOCIAL -->
-        <div class="box" style="text-align:center;">
-            <h2>Connect With Me</h2>
-            <p>Learn trading with discipline, psychology & real analysis</p>
-
-            <div class="social-buttons">
-
-                <a href="https://www.youtube.com/@The Power Of Trading" target="_blank" class="social youtube">
-                    <i class="fab fa-youtube"></i> YouTube
-                </a>
-
-                <a href="https://wa.me/917387347679" target="_blank" class="social whatsapp">
-                    <i class="fab fa-whatsapp"></i> WhatsApp
-                </a>
-
-                <a href="https://youtube.com/@thepoweroftrading_official?si=LmNgWsWTDFOuoioz" target="_blank" class="social telegram">
-                    <i class="fab fa-telegram"></i> Telegram
-                </a>
-
-            </div>
-        </div>
-
+    <div class="box">
+        <h2>About Me</h2>
+        <p>
+            I focus on real market understanding, price action,
+            and proper risk management.  
+            Trading is a skill — not gambling.
+        </p>
     </div>
+
+    <div class="box">
+        <h2>Trading Philosophy</h2>
+        <p>
+            ✔ Capital protection first<br>
+            ✔ Risk before reward<br>
+            ✔ Process over outcome<br>
+            ✔ Consistency > excitement
+        </p>
+    </div>
+
+    <div class="box">
+        <h2>Get Started</h2>
+        <p>
+            📧 Email: <b>akashmr1111@gmail.com</b><br>
+            📞 WhatsApp: <b>+91 7387347679</b>
+        </p>
+    </div>
+
+    <!-- SOCIAL (ONLY ONE TIME) -->
+    <div class="box" style="text-align:center;">
+        <h2>Connect With Me</h2>
+        <p>Learn trading with discipline & real analysis</p>
+
+        <div class="social-wrap">
+            <a href="https://www.youtube.com/@YourChannelName" target="_blank" class="social-btn youtube">
+                <i class="fab fa-youtube"></i> YouTube
+            </a>
+
+            <a href="https://wa.me/917387347679" target="_blank" class="social-btn whatsapp">
+                <i class="fab fa-whatsapp"></i> WhatsApp
+            </a>
+
+            <a href="https://t.me/YourTelegramUsername" target="_blank" class="social-btn telegram">
+                <i class="fab fa-telegram"></i> Telegram
+            </a>
+        </div>
+    </div>
+
+</div>
 </section>
 
 <footer>
@@ -348,29 +179,6 @@
 
 </body>
 </html>
-/@YourChannelName" target="_blank" class="social youtube">
-                    <i class="fab fa-youtube"></i> YouTube
-                </a>
 
-                <a href="https://wa.me/917387347679" target="_blank" class="social whatsapp">
-                    <i class="fab fa-whatsapp"></i> WhatsApp
-                </a>
-
-                <a href="https://t.me/YourTelegramUsername" target="_blank" class="social telegram">
-                    <i class="fab fa-telegram"></i> Telegram
-                </a>
-
-            </div>
-        </div>
-
-    </div>
-</section>
-
-<footer>
-    © 2026 The Power Of Trading. All Rights Reserved.
-</footer>
-
-</body>
-</html>
 
 
