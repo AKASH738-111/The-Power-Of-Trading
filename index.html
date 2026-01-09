@@ -1,97 +1,178 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="The Power Of Trading - Learn stock trading & forex from Akash Rajput with 7+ years of professional experience.">
-  <meta name="keywords" content="The Power Of Trading, Akash Rajput, Stock Trading, Forex Trading, Investment, Courses">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>The Power Of Trading</title>
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- TradingView -->
+  <script src="https://s3.tradingview.com/tv.js"></script>
+
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
+    body{background:#0b0f19;color:#fff;line-height:1.6}
+    a{text-decoration:none;color:inherit}
+
+    header{
+      background:linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)),url('https://images.unsplash.com/photo-1611974789855-9c6b24bff9a7');
+      background-size:cover;background-position:center;min-height:100vh
+    }
+
+    nav{display:flex;justify-content:space-between;align-items:center;padding:20px 8%}
+    nav h1{font-size:26px;font-weight:700;color:#00e5ff}
+    nav ul{display:flex;gap:25px;list-style:none}
+    nav ul li a:hover{color:#00e5ff}
+
+    .hero{height:80vh;display:flex;flex-direction:column;justify-content:center;padding:0 8%}
+    .hero h2{font-size:52px;margin-bottom:15px}
+    .hero p{max-width:650px;color:#ccc;margin-bottom:25px}
+    .btn{display:inline-block;background:#00e5ff;color:#000;padding:12px 30px;border-radius:30px;font-weight:600}
+
+    section{padding:80px 8%}
+    .dark{background:#11162a}
+    .section-title{text-align:center;margin-bottom:50px}
+    .section-title h2{font-size:36px;color:#00e5ff}
+
+    /* Stats */
+    .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:30px;text-align:center}
+    .stat-box{background:#0b0f19;padding:30px;border-radius:15px}
+    .stat-box h3{font-size:40px;color:#00e5ff}
+    .stat-box p{color:#bbb}
+
+    /* Courses */
+    .course-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:30px}
+    .course-card{background:#0b0f19;padding:30px;border-radius:15px;box-shadow:0 0 20px rgba(0,229,255,.15)}
+    .course-card h3{margin-bottom:10px}
+    .course-card p{color:#bbb;margin-bottom:20px}
+
+    /* Testimonials */
+    .testimonials{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:30px}
+    .testimonial{background:#0b0f19;padding:25px;border-radius:15px}
+    .testimonial p{color:#bbb;margin-bottom:10px}
+    .testimonial h4{color:#00e5ff}
+
+    /* WhatsApp */
+    .whatsapp{
+      position:fixed;bottom:25px;right:25px;
+      background:#25D366;color:#fff;
+      width:55px;height:55px;border-radius:50%;
+      display:flex;align-items:center;justify-content:center;
+      font-size:30px;z-index:999
+    }
+
+    footer{text-align:center;padding:25px;background:#0b0f19;color:#777}
+  </style>
 </head>
 <body>
-  <!-- Navbar -->
+
+<header>
   <nav>
-    <div class="logo">The Power Of Trading</div>
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="courses.html">Courses</a></li>
-      <li><a href="contact.html">Contact</a></li>
+    <h1>The Power Of Trading</h1>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#courses">Courses</a></li>
+      <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
+  <div class="hero">
+    <h2>Trade Like a Pro</h2>
+    <p>Professional stock & forex trading mentorship by Akash Rajput with 7+ years of real market experience.</p>
+    <a href="#courses" class="btn">Join Now</a>
+  </div>
+</header>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <h1>Welcome to The Power Of Trading</h1>
-    <p>Hi, I'm <strong>Akash Rajput</strong> – a professional trader with 7+ years of experience in the Indian Stock Market and Forex Trading.</p>
-    <p>Over the past 7 years, I have mastered trading strategies, risk management, and portfolio growth techniques that help my students achieve financial independence.</p>
-    <a href="courses.html" class="btn">Enroll Now & Start Learning</a>
-  </section>
+<!-- About -->
+<section id="about" class="dark">
+  <div class="section-title"><h2>About Me</h2></div>
+  <p style="max-width:900px;margin:auto;text-align:center;color:#ccc">
+    Hi, I'm <b>Akash Rajput</b>, a full-time professional trader. I help beginners and advanced traders achieve consistency using price action, psychology & risk management.
+  </p>
+</section>
 
-  <!-- About Section -->
-  <section class="about">
-    <h2>About Me</h2>
-    <p>My journey in trading started 7 years ago, exploring both Indian and Forex markets. I have consistently helped traders, beginners and professionals alike, understand market dynamics, technical analysis, and advanced trading strategies.</p>
-    <p>At <strong>The Power Of Trading</strong>, I focus on providing hands-on mentorship, practical trading experience, and personalized guidance so that every student can grow their trading skills with confidence.</p>
-    <p>Whether you want to trade stocks, indices, or currencies, my courses are designed to give you the knowledge, tools, and mindset to succeed in any market condition.</p>
-  </section>
+<!-- Stats -->
+<section>
+  <div class="stats">
+    <div class="stat-box"><h3>7+</h3><p>Years Experience</p></div>
+    <div class="stat-box"><h3>1500+</h3><p>Students Trained</p></div>
+    <div class="stat-box"><h3>85%</h3><p>Success Rate</p></div>
+    <div class="stat-box"><h3>24/7</h3><p>Mentorship</p></div>
+  </div>
+</section>
 
-  <!-- Courses Section -->
-  <section class="courses">
-    <h2>Our Courses</h2>
-    <div class="course-list">
-      <div class="course-card">
-        <h3>Beginner Stock Trading</h3>
-        <p>Learn the basics of stock market trading, charts & strategies.</p>
-        <button onclick="alert('Payment Placeholder')">Enroll Now</button>
-      </div>
-      <div class="course-card">
-        <h3>Advanced Trading Strategies</h3>
-        <p>Master advanced trading techniques and portfolio management.</p>
-        <button onclick="alert('Payment Placeholder')">Enroll Now</button>
-      </div>
+<!-- Live Chart -->
+<section class="dark">
+  <div class="section-title"><h2>Live Market</h2></div>
+  <div id="tvchart" style="height:500px"></div>
+</section>
+
+<!-- Courses -->
+<section id="courses">
+  <div class="section-title"><h2>Our Courses</h2></div>
+  <div class="course-grid">
+    <div class="course-card">
+      <h3>Beginner Stock Trading</h3>
+      <p>Basics, charts, indicators & live market examples.</p>
+      <a class="btn" href="#">Enroll Now</a>
     </div>
-  </section>
-
-  <!-- Testimonials Section -->
-  <section class="testimonials">
-    <h2>What Our Students Say</h2>
-    <div class="testimonial-cards">
-      <div class="card">
-        <p>"Akash Rajput's guidance changed my approach to trading. I now trade with confidence and consistency!"</p>
-        <span>- Student A</span>
-      </div>
-      <div class="card">
-        <p>"The mentorship at The Power Of Trading is practical, clear, and extremely helpful."</p>
-        <span>- Student B</span>
-      </div>
+    <div class="course-card">
+      <h3>Advanced Trading Strategies</h3>
+      <p>Institutional setups, psychology & capital management.</p>
+      <a class="btn" href="#">Enroll Now</a>
     </div>
-  </section>
-
-  <!-- Contact Section -->
-  <section class="contact">
-    <h2>Contact Me</h2>
-    <div class="contact-info">
-      <p><i class="fa-solid fa-envelope"></i> Email: <a href="mailto:akashmr1111@gmail.com">akashmr1111@gmail.com</a></p>
-      <p><i class="fa-brands fa-whatsapp"></i> WhatsApp: <a href="https://wa.me/917387347679">7387347679</a></p>
-      <p><i class="fa-brands fa-youtube"></i> YouTube: <a href="https://youtube.com/@YourChannelLink" target="_blank">Subscribe Here</a></p>
+    <div class="course-card">
+      <h3>Forex Mastery</h3>
+      <p>High probability forex strategies with risk control.</p>
+      <a class="btn" href="#">Enroll Now</a>
     </div>
-    <form onsubmit="alert('Form submitted (placeholder)'); return false;">
-      <input type="text" placeholder="Your Name" required>
-      <input type="email" placeholder="Your Email" required>
-      <textarea placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-  </section>
+  </div>
+</section>
 
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2026 The Power Of Trading. All Rights Reserved.</p>
-  </footer>
+<!-- Testimonials -->
+<section class="dark">
+  <div class="section-title"><h2>Student Reviews</h2></div>
+  <div class="testimonials">
+    <div class="testimonial"><p>"Best trading mentor in India. Changed my mindset completely."</p><h4>- Rahul</h4></div>
+    <div class="testimonial"><p>"Clear strategies & real support. Highly recommended."</p><h4>- Aman</h4></div>
+    <div class="testimonial"><p>"Finally consistent profits after this course."</p><h4>- Neha</h4></div>
+  </div>
+</section>
 
-  <script src="js/script.js"></script>
+<!-- Contact -->
+<section id="contact">
+  <div class="section-title"><h2>Contact</h2></div>
+  <p style="text-align:center;color:#ccc">
+    Email: akashmr1111@gmail.com<br>
+    Instagram: @thepoweroftrading
+  </p>
+</section>
+
+<footer>
+  <p>© 2026 The Power Of Trading | Designed by Akash Rajput</p>
+</footer>
+
+<a href="https://wa.me/917387347679" class="whatsapp">💬</a>
+
+<script>
+  new TradingView.widget({
+    "container_id": "tvchart",
+    "symbol": "NSE:NIFTY",
+    "interval": "D",
+    "theme": "dark",
+    "style": "1",
+    "locale": "in",
+    "hide_side_toolbar": false,
+    "allow_symbol_change": true
+  });
+</script>
+
 </body>
 </html>
+
 
 
 
