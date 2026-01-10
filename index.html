@@ -1,192 +1,222 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
   <title>The Power Of Trading</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Stylish Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <style>
-    *{margin:0;padding:0;box-sizing:border-box}
-    body{font-family:'Montserrat',sans-serif;background:linear-gradient(135deg,#05070f,#0b1228,#05070f);color:#fff;line-height:1.9}
-    a{text-decoration:none;color:inherit}
+    body{
+      margin:0;
+      font-family:'Poppins',sans-serif;
+      background:radial-gradient(circle at top,#0d0d0d,#000);
+      color:#fff;
+    }
 
-    section{padding:120px 20px}
-    .container{max-width:1300px;margin:auto}
+    section{padding:80px 8%;}
 
-    /* ---------- HEADER ---------- */
-    header{position:fixed;top:0;width:100%;z-index:1000;background:rgba(5,7,15,.8);backdrop-filter:blur(16px)}
-    .nav{max-width:1300px;margin:auto;display:flex;justify-content:space-between;align-items:center;padding:20px}
-
-    .logo{
-      font-family:'Playfair Display',serif;
-      font-size:48px;
-      font-weight:800;
-      color:#f5c84c;
+    /* HERO */
+    .hero{
+      min-height:100vh;
       display:flex;
       align-items:center;
-      gap:14px;
-      letter-spacing:1px
+      justify-content:center;
+      text-align:center;
+      background:linear-gradient(180deg,rgba(0,0,0,0.6),#000),url('https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3') center/cover;
     }
-    .logo i{font-size:40px;color:#f5c84c}
 
-    .nav ul{display:flex;gap:34px;list-style:none;font-size:14px}
-    .nav ul li{opacity:.75}
-    .nav ul li:hover{opacity:1}
-
-    /* ---------- HERO ---------- */
-    .hero{min-height:100vh;display:flex;align-items:center;position:relative;overflow:hidden}
-    .hero::before{content:'';position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3') center/cover no-repeat;opacity:.25}
-    .hero::after{content:'';position:absolute;inset:0;background:radial-gradient(circle at top,#1a234a,transparent 60%)}
-    .hero-content{position:relative;max-width:850px}
-    .hero h1{font-family:'Playfair Display',serif;font-size:64px;line-height:1.15;margin-bottom:28px}
-    .hero p{font-size:18px;opacity:.85;margin-bottom:40px}
-
-    .btn{display:inline-block;padding:16px 42px;border-radius:40px;font-weight:700;background:#f5c84c;color:#000;transition:.3s}
-    .btn:hover{transform:translateY(-4px)}
-
-    /* ---------- SECTION TITLES ---------- */
-    .title{max-width:720px;margin-bottom:70px}
-    .title h2{font-family:'Playfair Display',serif;font-size:46px;color:#f5c84c;margin-bottom:14px}
-    .title p{opacity:.7}
-
-    /* ---------- CARDS ---------- */
-    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:40px}
-    .card{background:linear-gradient(180deg,#0d1433,#070b1e);border-radius:26px;padding:46px}
-    .card h3{color:#f5c84c;margin-bottom:20px;font-size:22px}
-    .card p{opacity:.85;font-size:15px}
-
-    /* ---------- SPLIT SECTION ---------- */
-    .split{display:grid;grid-template-columns:1.2fr .8fr;gap:60px;align-items:center}
-
-    /* ---------- STATS ---------- */
-    .stats{background:#06091a}
-    .stats-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:40px;text-align:center}
-    .stat h3{font-size:52px;color:#f5c84c;font-family:'Playfair Display',serif}
-
-    /* ---------- FOOTER ---------- */
-    footer{background:#03050d;padding:90px 20px}
-    .footer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:50px}
-    footer i{color:#f5c84c;margin-right:10px}
-
-    iframe{border-radius:22px}
-
-    @media(max-width:900px){
-      .split{grid-template-columns:1fr}
-      .hero h1{font-size:42px}
-      .logo{font-size:34px}
-      .nav ul{display:none}
+    .hero h1{
+      font-size:64px;
+      font-weight:900;
+      color:#f4c430;
+      margin-bottom:20px;
     }
+
+    .hero h1 i{margin-right:14px;}
+
+    .hero p{
+      max-width:800px;
+      margin:auto;
+      font-size:20px;
+      opacity:0.9;
+    }
+
+    .btn{
+      display:inline-block;
+      margin-top:30px;
+      padding:14px 36px;
+      background:#f4c430;
+      color:#000;
+      border-radius:40px;
+      font-weight:700;
+      text-decoration:none;
+    }
+
+    /* SECTION TITLES */
+    .title{
+      font-size:44px;
+      color:#f4c430;
+      margin-bottom:30px;
+    }
+
+    /* GLASS BOX */
+    .box{
+      background:rgba(255,255,255,0.05);
+      padding:40px;
+      border-radius:22px;
+      backdrop-filter:blur(14px);
+      margin-bottom:40px;
+    }
+
+    /* COURSES */
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:30px;
+    }
+
+    /* CEO */
+    .ceo{
+      display:flex;
+      gap:30px;
+      align-items:center;
+      flex-wrap:wrap;
+    }
+
+    .ceo img{
+      width:200px;
+      height:200px;
+      border-radius:50%;
+      border:4px solid #f4c430;
+      object-fit:cover;
+    }
+
+    /* STATS */
+    .stats{
+      display:flex;
+      gap:40px;
+      justify-content:center;
+      flex-wrap:wrap;
+      text-align:center;
+    }
+
+    .stat h2{color:#f4c430;font-size:42px;}
+
+    /* IFRAME */
+    iframe{width:100%;height:450px;border:none;border-radius:18px;}
+
+    /* FOOTER */
+    footer{
+      padding:60px 8%;
+      background:#000;
+    }
+
+    .footer-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:30px;
+    }
+
+    footer a{color:#f4c430;text-decoration:none;}
+
   </style>
 </head>
 <body>
 
-<header>
-  <div class="nav">
-    <div class="logo"><i class="fa-solid fa-bull"></i> The Power Of Trading</div>
-    <ul>
-      <li>Home</li><li>Learn</li><li>Indicator</li><li>About</li><li>Contact</li>
-    </ul>
-  </div>
-</header>
-
+<!-- HERO -->
 <section class="hero">
-  <div class="container hero-content">
-    <h1>Professional Stock & Forex Trading Education</h1>
-    <p>A premium learning ecosystem designed for serious traders who want structure, discipline and long-term consistency in the markets.</p>
-    <a class="btn">Explore The System</a>
+  <div>
+    <h1><i class="fa-solid fa-bull"></i>The Power Of Trading</h1>
+    <p>Professional Stock Market & Forex Training Platform designed to build confident and disciplined traders.</p>
+    <a class="btn" href="https://forms.gle/yourformlink" target="_blank">Enroll Now</a>
   </div>
 </section>
 
+<!-- LEARN FROM SCRATCH -->
 <section>
-  <div class="container split">
-    <div>
-      <div class="title"><h2>Learn From Scratch</h2></div>
-      <p>Our learning system starts from absolute zero and gradually transforms students into confident traders. We focus on understanding charts, market behavior, price action and risk management before moving to advanced execution. This ensures clarity, discipline and consistency.</p><br>
-      <a class="btn" href="https://forms.gle/yourformlink" target="_blank">Enroll Now</a>
-    </div>
-    <div class="card">
-      <h3>What You Will Learn</h3>
-      <p>Market basics, candlestick behavior, trend structure, support & resistance, psychology, execution planning and risk control.</p>
-    </div>
+  <h2 class="title">Learn From Scratch</h2>
+  <div class="box">
+    <p>At The Power Of Trading, students are trained from absolute basics to advanced execution. We start with market foundations, candlestick understanding, price behavior, and gradually move towards professional trading mindset, risk management, psychology, and real market execution. Every concept is taught in a simplified, practical way so even beginners can gain confidence.</p>
+    <a class="btn" href="https://forms.gle/yourformlink" target="_blank">Enroll Now</a>
   </div>
 </section>
 
-<section class="stats">
-  <div class="container split">
-    <div class="card">
-      <h3>Live Q & A Support</h3>
-      <p>Dedicated live doubt-solving sessions where students can ask real market questions and improve clarity.</p><br>
-      <a class="btn" href="https://forms.gle/yourquestionform" target="_blank">Ask Your Question</a>
-    </div>
-    <div>
-      <div class="title"><h2>Direct Mentor Interaction</h2></div>
-      <p>We believe clarity comes from asking the right questions. Our Q/A system ensures no doubt is ignored.</p>
-    </div>
-  </div>
-</section>
-
+<!-- LIVE Q&A -->
 <section>
-  <div class="container">
-    <div class="title"><h2>Trading With Akash Indicator</h2></div>
-    <div class="grid">
-      <div class="card">
-        <p>The Trading With Akash indicator is built from a Data Engineer's mindset. It filters noise, highlights structure and provides logic-based signals for both beginners and professionals across Stock and Forex markets.</p>
-      </div>
-      <div class="card">
-        <iframe src="https://s.tradingview.com/widgetembed/?symbol=NSE:NIFTY&interval=5&theme=dark" width="100%" height="360"></iframe>
-      </div>
-    </div>
+  <h2 class="title">Live Q & A Sessions</h2>
+  <div class="box">
+    <p>Regular live Q&A sessions are conducted where students can directly ask their doubts, share charts, and understand real-time market behavior. This helps students eliminate confusion and build strong clarity.</p>
+    <a class="btn" href="https://forms.gle/yourquestionform" target="_blank">Ask Your Question</a>
   </div>
 </section>
 
-<section class="stats">
-  <div class="container">
-    <div class="title"><h2>The Power Of Trading Classes</h2></div>
-    <div class="card">
-      <p>The Power Of Trading Classes is designed to create disciplined and independent traders. We emphasize structure, psychology, risk control and professional execution. Our system is built to remove confusion and emotional trading. Students are trained to understand market behavior rather than chase signals. With live sessions, revision, mentorship and real market exposure, we focus on long-term growth. Our vision is to build traders who survive, sustain and grow consistently in both Indian Stock Market and Forex Market.</p>
-    </div>
-  </div>
-</section>
-
+<!-- INDICATOR -->
 <section>
-  <div class="container">
-    <div class="title"><h2>About The CEO</h2></div>
-    <div class="card">
-      <p><b>Akash Rajput</b>, founder and CEO of The Power Of Trading, has over 7 years of experience in the Indian Stock Market and Forex Market. His approach is based on price action, structure and psychology. He believes trading is a professional skill that requires patience, discipline and a proper system.</p>
-    </div>
+  <h2 class="title">Trading With Akash Indicator</h2>
+  <div class="box">
+    <p>Trading With Akash Indicator is built using a Data Engineer's perspective to help traders identify high-probability trade setups. This indicator works efficiently for both beginners and professional traders by filtering noise and highlighting structured market opportunities.</p>
+    <iframe src="https://s.tradingview.com/embed-widget/advanced-chart/?symbol=NSE:NIFTY"></iframe>
   </div>
 </section>
 
-<section class="stats">
-  <div class="container stats-grid">
-    <div class="stat"><h3>1K+</h3><p>YouTube Subscribers</p></div>
-    <div class="stat"><h3>1200+</h3><p>Students Mentored</p></div>
+<!-- POWER OF TRADING CLASSES -->
+<section>
+  <h2 class="title">The Power Of Trading Classes</h2>
+  <div class="box">
+    <p>The Power Of Trading is one of India's rapidly growing stock market and forex education platforms. Our goal is to develop disciplined traders with a professional mindset rather than shortcut seekers. We focus on price action, institutional thinking, capital protection, and consistency. Students are trained to understand market behavior instead of blindly following tips. With structured mentorship, live sessions, and practical learning, we ensure long-term growth for every serious trader.</p>
   </div>
 </section>
 
+<!-- ABOUT CEO -->
+<section>
+  <h2 class="title">About The CEO</h2>
+  <div class="box ceo">
+    <img src="assets/images/akash.jpg" alt="Akash Rajput">
+    <p>Akash Rajput is the Founder & CEO of The Power Of Trading. With more than 7 years of experience in the Indian Stock Market and Forex Market, he specializes in price action, risk management, and trading psychology. His mission is to educate traders with real market knowledge and help them achieve consistency with discipline.</p>
+  </div>
+</section>
+
+<!-- STATS -->
+<section>
+  <div class="stats">
+    <div class="stat"><h2>1K+</h2><p>YouTube Subscribers</p></div>
+    <div class="stat"><h2>1200+</h2><p>Students Mentored</p></div>
+  </div>
+</section>
+
+<!-- LIVE MARKET -->
+<section>
+  <h2 class="title">Today's Live Market</h2>
+  <div class="box"><iframe src="https://s.tradingview.com/embed-widget/market-overview/?locale=en"></iframe></div>
+  <div class="box"><iframe src="https://s.tradingview.com/embed-widget/timeline/?locale=en"></iframe></div>
+  <div class="box"><iframe src="https://s.tradingview.com/embed-widget/hotlists/?locale=en"></iframe></div>
+</section>
+
+<!-- FOOTER -->
 <footer>
-  <div class="container footer-grid">
+  <div class="footer-grid">
     <div>
       <h3>The Power Of Trading</h3>
       <p>Office No. 320, Palaskheda, Maharashtra</p>
+      <p>Hours: Everyday 10:00 AM – 7:00 PM</p>
     </div>
     <div>
-      <p><i class="fa-brands fa-whatsapp"></i> 7387347679</p>
-      <p><i class="fa-solid fa-envelope"></i> akashmr1111@gmail.com</p>
-      <p><i class="fa-brands fa-youtube"></i> YouTube Channel</p>
-    </div>
-    <div>
-      <p><b>Hours</b><br>Everyday: 10:00 AM – 7:00 PM</p>
+      <p><i class="fa-brands fa-whatsapp"></i> <a href="https://wa.me/917387347679">7387347679</a></p>
+      <p><i class="fa-solid fa-envelope"></i> <a href="mailto:akashmr1111@gmail.com">akashmr1111@gmail.com</a></p>
+      <p><i class="fa-brands fa-youtube"></i> <a href="#">YouTube Channel</a></p>
     </div>
   </div>
 </footer>
 
 </body>
 </html>
+
 
 
 
