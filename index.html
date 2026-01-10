@@ -153,6 +153,54 @@
   </div>
 </section>
 
+<!-- LIVE INTERACTIVE MARKET SECTION -->
+<section id="interactive-market">
+  <div class="title" data-aos="fade-up">
+    <h2>Live Market Interaction</h2>
+    <p>Tap any market to view live charts instantly</p>
+  </div>
+
+  <div class="grid">
+    <div class="card market-tap" onclick="openChart('NSE:NIFTY')" data-aos="zoom-in">
+      <h3>NIFTY 50</h3>
+      <p>Tap to view live chart</p>
+    </div>
+
+    <div class="card market-tap" onclick="openChart('NSE:BANKNIFTY')" data-aos="zoom-in">
+      <h3>BANK NIFTY</h3>
+      <p>Tap to view live chart</p>
+    </div>
+
+    <div class="card market-tap" onclick="openChart('FX:EURUSD')" data-aos="zoom-in">
+      <h3>EUR/USD</h3>
+      <p>Tap to view live Forex chart</p>
+    </div>
+  </div>
+
+  <div id="liveChartBox" class="card" style="margin-top:60px;display:none" data-aos="fade-up">
+    <iframe id="liveChart" src="" height="500"></iframe>
+  </div>
+</section>
+
+<!-- FII DII DEDICATED SECTION -->
+<section class="stats" id="fii-dii">
+  <div class="title" data-aos="fade-up">
+    <h2>FII / DII Institutional Activity</h2>
+    <p>Track institutional money flow impacting the market</p>
+  </div>
+
+  <div class="grid">
+    <div class="card" data-aos="fade-right">
+      <h3>Institutional Overview</h3>
+      <p>Foreign Institutional Investors (FII) and Domestic Institutional Investors (DII) play a major role in market direction. Monitoring their daily activity helps traders understand smart money flow and market sentiment.</p>
+    </div>
+
+    <div class="card" data-aos="fade-left">
+      <iframe src="https://s.tradingview.com/embed-widget/hotlists/?locale=en"></iframe>
+    </div>
+  </div>
+</section>
+
 <section class="stats">
   <div class="title" data-aos="fade-up"><h2>Live Market & News</h2></div>
   <div class="grid">
@@ -210,6 +258,7 @@
 
 </body>
 </html>
+
 
 
 
