@@ -4,55 +4,56 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>The Power Of Trading</title>
-  <meta name="description" content="The Power Of Trading – Professional Stock & Forex Market Trading Academy" />
+  <meta name="description" content="The Power Of Trading – Professional Stock & Forex Market Trading Classes" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <style>
     *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
-    body{background:#0b0f1a;color:#fff;line-height:1.6}
+    body{background:#0b0f1a;color:#fff;line-height:1.7}
     a{text-decoration:none;color:inherit}
 
     header{position:fixed;top:0;left:0;width:100%;background:rgba(11,15,26,.9);backdrop-filter:blur(10px);z-index:1000}
-    .nav{max-width:1200px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:18px}
-    .logo{font-size:22px;font-weight:700;color:#f4c430}
-    .nav ul{display:flex;gap:28px;list-style:none}
-    .nav ul li{font-size:14px;opacity:.85}
+    .nav{max-width:1200px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:16px}
 
-    .contact-bar{display:flex;gap:18px;align-items:center;font-size:13px}
+    .logo{font-size:30px;font-weight:800;color:#ff2b2b;display:flex;align-items:center;gap:10px}
+    .logo i{color:#ff2b2b;font-size:28px}
+
+    .nav ul{display:flex;gap:26px;list-style:none;font-size:14px}
+
+    .contact-bar{display:flex;gap:18px;font-size:13px}
     .contact-bar i{color:#25D366}
 
-    .btn{padding:10px 22px;background:#f4c430;color:#000;border-radius:6px;font-weight:600}
+    .btn{padding:12px 26px;background:#ff2b2b;color:#fff;border-radius:8px;font-weight:600;display:inline-block}
 
-    .hero{min-height:100vh;background:url('https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3') center/cover no-repeat;display:flex;align-items:center}
-    .hero-overlay{width:100%;background:linear-gradient(90deg,rgba(11,15,26,.95),rgba(11,15,26,.6));padding-top:120px}
+    .hero{min-height:100vh;background:url('https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3') center/cover no-repeat}
+    .hero-overlay{min-height:100vh;background:linear-gradient(90deg,rgba(11,15,26,.96),rgba(11,15,26,.6));padding-top:120px}
     .hero-content{max-width:1200px;margin:auto;padding:40px}
-    .hero h1{font-size:48px;max-width:650px;line-height:1.2}
-    .hero p{margin:20px 0;max-width:560px;opacity:.85}
+    .hero h1{font-size:52px;max-width:720px}
+    .hero p{margin:22px 0;max-width:620px;opacity:.85}
 
-    section{padding:80px 20px}
+    section{padding:90px 20px}
     .container{max-width:1200px;margin:auto}
     .section-title{text-align:center;margin-bottom:50px}
-    .section-title h2{font-size:36px}
-    .section-title p{opacity:.7}
+    .section-title h2{font-size:38px;color:#ff2b2b}
+    .section-title p{opacity:.75}
 
-    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:30px}
-    .card{background:#13182b;padding:30px;border-radius:14px;transition:.3s}
-    .card:hover{transform:translateY(-8px)}
-    .card h3{margin-bottom:10px;color:#f4c430}
-    .card p{opacity:.8;font-size:14px}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:30px}
+    .card{background:#13182b;padding:34px;border-radius:18px}
+    .card h3{color:#ff2b2b;margin-bottom:14px}
+    .card p{opacity:.85;font-size:15px}
 
     .stats{background:#0f1426}
-    .stats-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:30px;text-align:center}
-    .stat h3{font-size:40px;color:#f4c430}
+    .stats-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:30px;text-align:center}
+    .stat h3{font-size:42px;color:#ff2b2b}
 
-    footer{background:#080b14;padding:50px 20px}
-    .footer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:30px}
-    footer p{font-size:13px;opacity:.7}
+    footer{background:#080b14;padding:60px 20px}
+    .footer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:30px}
+    footer p{font-size:14px;opacity:.75}
 
     @media(max-width:768px){
-      .hero h1{font-size:34px}
-      .nav ul{display:none}
-      .contact-bar{display:none}
+      .hero h1{font-size:36px}
+      .nav ul,.contact-bar{display:none}
+      .logo{font-size:24px}
     }
   </style>
 </head>
@@ -60,13 +61,9 @@
 
 <header>
   <div class="nav">
-    <div class="logo">The Power Of Trading</div>
+    <div class="logo"><i class="fa-solid fa-bull"></i> The Power Of Trading</div>
     <ul>
-      <li>Home</li>
-      <li>Courses</li>
-      <li>Forex</li>
-      <li>About</li>
-      <li>Contact</li>
+      <li>Home</li><li>About</li><li>Courses</li><li>Contact</li>
     </ul>
     <div class="contact-bar">
       <span><i class="fa-brands fa-whatsapp"></i> 7387347679</span>
@@ -78,28 +75,58 @@
 <section class="hero">
   <div class="hero-overlay">
     <div class="hero-content">
-      <h1>Master Stock & Forex Market Trading With Confidence</h1>
-      <p>The Power Of Trading is a professional trading education platform focused on building consistency, discipline and profitable trading mindset.</p>
-      <a class="btn">Join Now</a>
+      <h1>Build Consistency & Confidence In Stock And Forex Trading</h1>
+      <p>The Power Of Trading is designed for students who want to learn trading from scratch and grow into confident, disciplined and profitable traders.</p>
+      <a class="btn">Enroll Now</a>
     </div>
   </div>
 </section>
 
 <section>
   <div class="container">
-    <div class="section-title">
-      <h2>Our Courses</h2>
-      <p>Choose the right learning path for your trading journey</p>
+    <div class="section-title"><h2>About Me</h2></div>
+    <div class="card">
+      <p>I am a professional trader with more than <b>7 years of experience</b> in the Indian Stock Market and the Forex Market. Over the years, I have worked on price action, market structure, risk management and trading psychology. My teaching approach focuses on real market understanding, discipline and consistency rather than shortcuts or tips.</p><br>
+      <p>Key focus areas include: price action trading, market trends, capital protection, psychology control, system-based trading and long-term consistency.</p>
     </div>
+  </div>
+</section>
+
+<section class="stats">
+  <div class="container">
+    <div class="section-title"><h2>Learning System</h2></div>
     <div class="grid">
-      <div class="card">
-        <h3>Basic Trading Course</h3>
-        <p>• Stock market fundamentals<br>• Market structure & trends<br>• Candlestick patterns<br>• Basic price action<br>• Risk & capital management<br>• Trading psychology basics</p>
-      </div>
-      <div class="card">
-        <h3>Premium Trading Course</h3>
-        <p>• Advanced price action strategies<br>• Options & futures trading<br>• Intraday & swing trading setups<br>• Live market trading sessions<br>• Personal mentorship support<br>• Advanced trading psychology</p>
-      </div>
+      <div class="card"><h3>Learn From Scratch</h3><p>I teach students from absolute basics such as market structure, candles and trends, slowly building them towards advanced strategies so even beginners can trade confidently.</p></div>
+      <div class="card"><h3>Revision Classes</h3><p>Regular revision sessions help students strengthen concepts, clear doubts and improve execution so knowledge becomes practical skill.</p></div>
+      <div class="card"><h3>Live Q&A Sessions</h3><p>Live interactive question & answer sessions allow students to directly ask doubts, share charts and improve real-time decision making.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-title"><h2>Trading With Akash Indicator</h2></div>
+    <div class="card">
+      <p>The <b>Trading With Akash</b> indicator is designed for both beginners and professional traders. Built from a <b>Data Engineer’s perspective</b>, it focuses on clean signals, structure-based logic and risk awareness, helping traders improve accuracy and confidence.</p>
+    </div>
+  </div>
+</section>
+
+<section class="stats">
+  <div class="container">
+    <div class="section-title"><h2>Enroll Now</h2></div>
+    <div class="grid">
+      <div class="card"><h3>Basic Course</h3><p>Perfect for beginners starting their trading journey.</p><a class="btn" href="#">Enroll (Google Form)</a></div>
+      <div class="card"><h3>Advanced Course</h3><p>For traders who want advanced strategies & mentorship.</p><a class="btn" href="#">Enroll (Google Form)</a></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-title"><h2>The Power Of Trading Classes</h2></div>
+    <div class="card">
+      <p>The Power Of Trading Classes is among the trusted Stock Market and Forex trading education platforms in India. With structured learning, live mentorship, revision support and practical exposure, we focus on building skilled and disciplined traders rather than gamblers.</p>
     </div>
   </div>
 </section>
@@ -107,21 +134,8 @@
 <section class="stats">
   <div class="container">
     <div class="stats-grid">
-      <div class="stat"><h3>Live</h3><p>Market Training</p></div>
-      <div class="stat"><h3>Forex</h3><p>& Stock Market</p></div>
-      <div class="stat"><h3>Mentorship</h3><p>Support</p></div>
-    </div>
-  </div>
-</section>
-
-<section>
-  <div class="container">
-    <div class="section-title">
-      <h2>About Forex Market</h2>
-      <p>Trade global currency markets professionally</p>
-    </div>
-    <div class="card">
-      <p>The Forex market is the world's largest financial market where currencies are traded globally. It operates 24 hours a day, five days a week, offering traders high liquidity and multiple trading opportunities. In our course, you will learn how forex pairs move, market sessions, trend analysis and risk management techniques used by professional traders.</p>
+      <div class="stat"><h3>25K+</h3><p>YouTube Subscribers</p></div>
+      <div class="stat"><h3>1200+</h3><p>Students Mentored</p></div>
     </div>
   </div>
 </section>
@@ -131,16 +145,16 @@
     <div class="footer-grid">
       <div>
         <h3>The Power Of Trading</h3>
-        <p>Professional Stock & Forex Trading Education Platform.</p>
+        <p>Office No. 320, Palaskheda, Maharashtra</p>
       </div>
       <div>
         <h4>Contact</h4>
-        <p><i class="fa-brands fa-whatsapp"></i> 7387347679</p>
-        <p><i class="fa-solid fa-envelope"></i> akashmr1111@gmail.com</p>
+        <p><a href="mailto:akashmr1111@gmail.com">akashmr1111@gmail.com</a></p>
+        <p>📞 7387347679</p>
       </div>
       <div>
-        <h4>Legal</h4>
-        <p>Disclaimer</p><p>Privacy Policy</p>
+        <h4>Hours</h4>
+        <p>Everyday: 10.00 AM – 7.00 PM</p>
       </div>
     </div>
     <p style="text-align:center;margin-top:30px">© 2026 The Power Of Trading. All Rights Reserved.</p>
@@ -149,6 +163,7 @@
 
 </body>
 </html>
+
 
 
 
