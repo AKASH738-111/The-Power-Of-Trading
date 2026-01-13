@@ -48,31 +48,37 @@
     .nav ul li:hover{opacity:1}
 
     /* HERO */
-<section class="hero">
-  <div class="hero-container">
+    .hero{
+      min-height:100vh;
+      display:flex;align-items:center;
+      position:relative;
+    }
+    .hero::before{
+      content:'';position:absolute;inset:0;
+      background:url('https://images.unsplash.com/photo-1640340434855-6084e0f04a2f') center/cover;
+      opacity:.22;
+    }
+    .hero::after{
+      content:'';position:absolute;inset:0;
+      background:radial-gradient(circle at top,#1a245a,transparent 60%);
+    }
+    .hero-content{position:relative;max-width:880px}
+    .hero h1{
+      font-family:'Playfair Display',serif;
+      font-size:72px;line-height:1.1;
+      margin-bottom:26px;
+    }
+    .hero p{font-size:20px;opacity:.9;margin-bottom:44px}
 
-    <!-- LEFT CONTENT -->
-    <div class="hero-text">
-      <h1>India’s Premium Stock &<br>Forex Trading Education</h1>
-      <p>
-        Professional trading mentorship built on discipline,
-        data-driven logic and real market experience.
-      </p>
-      <a href="#courses" class="btn-primary">Enroll Now</a>
-    </div>
-   <!-- RIGHT SIDE IMAGE -->
-<div class="hero-image">
-  <img src="images/akash.jpg" alt="Akash Rajput">
-</div>
-
-    <!-- RIGHT IMAGE -->
-    <div class="hero-image">
-      <img src="images/akash.jpg" alt="Akash Rajput">
-    </div>
-
-  </div>
-</section>
-
+    .btn{
+      display:inline-block;
+      padding:16px 44px;
+      border-radius:40px;
+      font-weight:700;
+      background:#f4c430;color:#000;
+      transition:.35s;
+    }
+    .btn:hover{transform:translateY(-6px);box-shadow:0 30px 60px rgba(0,0,0,.6)}
 
     /* TITLES */
     .title{max-width:820px;margin-bottom:70px}
@@ -198,23 +204,11 @@
     </div>
   </div>
 
-  <!-- TradingView Forex News -->
-<div class="tradingview-widget-container">
-  <div class="tradingview-widget-container__widget"></div>
-
-  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-news.js" async>
-  {
-    "feedMode": "all_symbols",
-    "colorTheme": "dark",
-    "isTransparent": true,
-    "displayMode": "regular",
-    "width": "100%",
-    "height": "450",
-    "locale": "en"
-  }
-  </script>
-</div>
-
+  <!-- Forex Factory News -->
+  <div class="card" style="margin-top:60px" data-aos="fade-up">
+    <h3>Live Forex Factory – High Impact News</h3>
+    <iframe src="https://www.forexfactory.com/calendar" height="520"></iframe>
+    <p style="opacity:.7;margin-top:12px">News-driven volatility explained in live sessions</p>
   </div>
 </section>
 
