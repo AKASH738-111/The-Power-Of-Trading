@@ -1,109 +1,338 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>The Power Of Trading</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <title>The Power Of Trading | Premium Trading Education</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Premium Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- AOS Animation -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{
+      font-family:'Inter',sans-serif;
+      background:radial-gradient(circle at top,#0b1025,#02040a);
+      color:#fff;
+      overflow-x:hidden;
+    }
+
+    section{padding:120px 8%;}
+    a{text-decoration:none;color:inherit}
+
+    /* HEADER */
+    header{
+      position:fixed;top:0;width:100%;z-index:1000;
+      background:rgba(2,4,10,0.6);
+      backdrop-filter:blur(18px);
+    }
+    .nav{
+      max-width:1400px;margin:auto;
+      display:flex;justify-content:space-between;align-items:center;
+      padding:22px 30px;
+    }
+    .logo{
+      font-family:'Playfair Display',serif;
+      font-size:46px;font-weight:800;
+      color:#f4c430;
+      display:flex;gap:14px;align-items:center;
+    }
+    .nav ul{display:flex;gap:36px;list-style:none;font-size:15px}
+    .nav ul li{opacity:.8}
+    .nav ul li:hover{opacity:1}
+
+    /* HERO */
+    .hero{
+      min-height:100vh;
+      display:flex;align-items:center;
+      position:relative;
+    }
+    .hero::before{
+      content:'';position:absolute;inset:0;
+      background:url('https://images.unsplash.com/photo-1640340434855-6084e0f04a2f') center/cover;
+      opacity:.22;
+    }
+    .hero::after{
+      content:'';position:absolute;inset:0;
+      background:radial-gradient(circle at top,#1a245a,transparent 60%);
+    }
+    .hero-content{position:relative;max-width:880px}
+    .hero h1{
+      font-family:'Playfair Display',serif;
+      font-size:72px;line-height:1.1;
+      margin-bottom:26px;
+    }
+    .hero p{font-size:20px;opacity:.9;margin-bottom:44px}
+
+    .btn{
+      display:inline-block;
+      padding:16px 44px;
+      border-radius:40px;
+      font-weight:700;
+      background:#f4c430;color:#000;
+      transition:.35s;
+    }
+    .btn:hover{transform:translateY(-6px);box-shadow:0 30px 60px rgba(0,0,0,.6)}
+
+    /* TITLES */
+    .title{max-width:820px;margin-bottom:70px}
+    .title h2{
+      font-family:'Playfair Display',serif;
+      font-size:52px;color:#f4c430;margin-bottom:16px;
+    }
+    .title p{opacity:.7}
+
+    /* GLASS CARD */
+    .card{
+      background:linear-gradient(180deg,#0e1435,#050817);
+      border-radius:28px;
+      padding:50px;
+      box-shadow:0 30px 80px rgba(0,0,0,.7);
+    }
+
+    /* GRID */
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:46px}
+
+    /* STATS */
+    .stats{background:#030614}
+    .stats-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:50px;text-align:center}
+    .stat h3{font-size:54px;color:#f4c430;font-family:'Playfair Display',serif}
+
+    /* CEO */
+    .ceo{display:grid;grid-template-columns:260px 1fr;gap:40px;align-items:center}
+    .ceo img{width:260px;height:260px;border-radius:50%;border:5px solid #f4c430;object-fit:cover}
+
+    iframe{width:100%;height:420px;border:none;border-radius:22px}
+
+    /* FOOTER */
+    footer{background:#02030a;padding:100px 8%}
+    .footer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:60px}
+    footer i{color:#f4c430;margin-right:10px}
+
+    @media(max-width:900px){
+      .hero h1{font-size:44px}
+      .logo{font-size:34px}
+      .nav ul{display:none}
+      .ceo{grid-template-columns:1fr;text-align:center}
+    }
+  </style>
 </head>
 <body>
 
-<!-- HERO SECTION -->
-<section class="hero fade-in">
-  <div class="hero-content">
-    <h1>
-      <span class="bull">🐂</span>
-      <span class="brand-name">The Power Of Trading</span>
-    </h1>
-
-    <p class="hero-tagline">
-      Learn Stock Market & Forex Trading from Scratch to Pro Level
-    </p>
-
-    <div class="hero-buttons">
-      <a href="#courses" class="btn primary">Enroll Now</a>
-      <a href="#forex" class="btn secondary">Live Forex</a>
-    </div>
+<header>
+  <div class="nav">
+    <div class="logo"><i class="fa-solid fa-bull"></i>The Power Of Trading</div>
+    <ul>
+      <li>Home</li><li>Courses</li><li>Indicator</li><li>Live Market</li><li>Contact</li>
+    </ul>
   </div>
+</header>
 
-  <div class="hero-image">
-    <img src="images/akash.jpg" alt="Akash Rajput - CEO">
+<section class="hero">
+  <div class="hero-content" data-aos="fade-up">
+    <h1>India’s Premium Stock & Forex Trading Education</h1>
+    <p>Professional trading mentorship built on discipline, data-driven logic and real market experience.</p>
+    <a class="btn" href="https://forms.gle/yourformlink" target="_blank">Enroll Now</a>
   </div>
 </section>
 
-<!-- COURSES -->
-<section id="courses" class="section">
-  <h2>Learn From Scratch</h2>
-  <p>
-    We teach trading from absolute zero level. From market basics, chart reading,
-    price action, indicators, psychology & risk management.
-  </p>
-
-  <div class="cards">
-    <div class="card">
-      <h3>Basic Course</h3>
-      <ul>
-        <li>Market Basics</li>
-        <li>Candlestick Patterns</li>
-        <li>Support & Resistance</li>
-        <li>Risk Management</li>
-      </ul>
-    </div>
-
-    <div class="card">
-      <h3>Advanced Course</h3>
-      <ul>
-        <li>Price Action Mastery</li>
-        <li>Institutional Concepts</li>
-        <li>Forex & Indices</li>
-        <li>Live Market Trading</li>
-      </ul>
-    </div>
+<section>
+  <div class="title" data-aos="fade-up">
+    <h2>Learn From Scratch</h2>
+    <p>From zero knowledge to professional execution</p>
+  </div>
+  <div class="card" data-aos="fade-up">
+    <p>Students are trained step-by-step starting from market basics, chart reading, candlestick psychology, price structure, support & resistance, trend identification, and risk management. We then move towards advanced execution, discipline, and professional mindset building so students trade with confidence in live markets.</p>
+    <br><a class="btn" href="https://forms.gle/yourformlink" target="_blank">Enroll Now</a>
   </div>
 </section>
 
-<!-- FOREX -->
-<section id="forex" class="section dark">
-  <h2>Live Forex Market</h2>
+<!-- LIVE INTERACTIVE MARKET SECTION -->
+<section id="interactive-market">
+  <div class="title" data-aos="fade-up">
+    <h2>Live Market Interaction</h2>
+    <p>Tap any market to view live charts instantly</p>
+  </div>
 
-  <div class="cards">
-    <div class="card">
+  <div class="grid">
+    <div class="card market-tap" onclick="openChart('NSE:NIFTY')" data-aos="zoom-in">
+      <h3>NIFTY 50</h3>
+      <p>Tap to view live chart</p>
+    </div>
+
+    <div class="card market-tap" onclick="openChart('NSE:BANKNIFTY')" data-aos="zoom-in">
+      <h3>BANK NIFTY</h3>
+      <p>Tap to view live chart</p>
+    </div>
+
+    <div class="card market-tap" onclick="openChart('FX:EURUSD')" data-aos="zoom-in">
+      <h3>EUR/USD</h3>
+      <p>Tap to view live Forex chart</p>
+    </div>
+  </div>
+
+  <div id="liveChartBox" class="card" style="margin-top:60px;display:none" data-aos="fade-up">
+    <iframe id="liveChart" src="" height="500"></iframe>
+  </div>
+</section>
+
+<!-- LIVE FOREX MARKET SECTION -->
+<section id="live-forex">
+  <div class="title" data-aos="fade-up">
+    <h2>Live Forex Market</h2>
+    <p>Real-time forex charts, currency strength & high-impact news</p>
+  </div>
+
+  <div class="grid">
+    <!-- Forex Live Chart -->
+    <div class="card market-tap" data-aos="fade-right">
       <h3>EUR/USD Live Chart</h3>
-      <iframe src="https://s.tradingview.com/widgetembed/?symbol=FX:EURUSD&interval=15&theme=dark" height="400"></iframe>
+      <iframe src="https://s.tradingview.com/widgetembed/?symbol=FX:EURUSD&interval=15&theme=dark" height="420"></iframe>
     </div>
 
-    <div class="card">
-      <h3>Currency Strength</h3>
-      <iframe src="https://s.tradingview.com/widgetembed/?symbol=FX_IDC:USD&theme=dark" height="400"></iframe>
+    <!-- Currency Strength Meter -->
+    <div class="card" data-aos="fade-left">
+      <h3>Forex Currency Strength Meter</h3>
+      <iframe src="https://s.tradingview.com/widgetembed/?symbol=FX_IDC:USD&theme=dark" height="420"></iframe>
+      <p style="opacity:.7;margin-top:10px">Higher strength = strong buying pressure</p>
     </div>
   </div>
 
-  <div class="card full">
-    <h3>Forex Factory – Important News</h3>
-    <iframe src="https://www.forexfactory.com/calendar" height="500"></iframe>
+  <!-- Forex Factory News -->
+  <div class="card" style="margin-top:60px" data-aos="fade-up">
+    <h3>Live Forex Factory – High Impact News</h3>
+    <iframe src="https://www.forexfactory.com/calendar" height="520"></iframe>
+    <p style="opacity:.7;margin-top:12px">News-driven volatility explained in live sessions</p>
   </div>
 </section>
 
-<!-- ABOUT -->
-<section class="section">
-  <h2>About CEO – Akash Rajput</h2>
-  <p>
-    Akash Rajput is the Founder & CEO of The Power Of Trading with 7+ years of
-    experience in Indian Stock Market & Forex Market. He believes in data-driven,
-    disciplined & psychology-based trading rather than tips or gambling.
-  </p>
+<!-- LONG TERM STOCKS SECTION -->
+<section id="long-term-stocks">
+  <div class="title" data-aos="fade-up">
+    <h2>Long Term High-Volume Stocks (India)</h2>
+    <p>Strong fundamentals + consistent volume = long-term wealth creation</p>
+  </div>
+
+  <div class="grid">
+    <div class="card market-tap" onclick="openChart('NSE:RELIANCE')" data-aos="zoom-in">
+      <h3>Reliance Industries</h3>
+      <p>High volume, diversified business, strong institutional interest</p>
+    </div>
+
+    <div class="card market-tap" onclick="openChart('NSE:TCS')" data-aos="zoom-in">
+      <h3>TCS</h3>
+      <p>IT sector leader, consistent earnings, stable long-term trend</p>
+    </div>
+
+    <div class="card market-tap" onclick="openChart('NSE:HDFCBANK')" data-aos="zoom-in">
+      <h3>HDFC Bank</h3>
+      <p>Banking giant with strong volume participation and fundamentals</p>
+    </div>
+
+    <div class="card market-tap" onclick="openChart('NSE:ICICIBANK')" data-aos="zoom-in">
+      <h3>ICICI Bank</h3>
+      <p>Strong growth, improving asset quality, high delivery volumes</p>
+    </div>
+
+    <div class="card market-tap" onclick="openChart('NSE:INFY')" data-aos="zoom-in">
+      <h3>Infosys</h3>
+      <p>Global IT exposure, consistent cash flow, long-term accumulation</p>
+    </div>
+
+    <div class="card market-tap" onclick="openChart('NSE:LT')" data-aos="zoom-in">
+      <h3>Larsen & Toubro (L&T)</h3>
+      <p>Infrastructure leader, order book strength, volume expansion</p>
+    </div>
+  </div>
+
+  <div id="liveChartBox" class="card" style="margin-top:60px;display:none" data-aos="fade-up">
+    <h3>Live Stock Chart</h3>
+    <iframe id="liveChart" src="" height="520"></iframe>
+    <p style="opacity:.7;margin-top:14px">Note: This chart is for learning & analysis. Actual buying is done via your broker (Zerodha, Groww, Angel One etc.).</p>
+  </div>
 </section>
 
-<!-- CONTACT -->
-<section class="section dark">
-  <h2>Contact Us</h2>
-  <p>📍 Office No 320, Palaskheda, Maharashtra</p>
-  <p>📧 <a href="mailto:akashmr1111@gmail.com">akashmr1111@gmail.com</a></p>
-  <p>📱 <a href="https://wa.me/917387347679">7387347679</a></p>
-  <p>⏰ Everyday : 10:00 AM – 7:00 PM</p>
+<!-- FII DII DEDICATED SECTION -->
+<section class="stats" id="fii-dii">
+  <div class="title" data-aos="fade-up">
+    <h2>FII / DII Institutional Activity</h2>
+    <p>Track institutional money flow impacting the market</p>
+  </div>
+
+  <div class="grid">
+    <div class="card" data-aos="fade-right">
+      <h3>Institutional Overview</h3>
+      <p>Foreign Institutional Investors (FII) and Domestic Institutional Investors (DII) play a major role in market direction. Monitoring their daily activity helps traders understand smart money flow and market sentiment.</p>
+    </div>
+
+    <div class="card" data-aos="fade-left">
+      <iframe src="https://s.tradingview.com/embed-widget/hotlists/?locale=en"></iframe>
+    </div>
+  </div>
 </section>
 
-<script src="script.js"></script>
+<section class="stats">
+  <div class="title" data-aos="fade-up"><h2>Live Market & News</h2></div>
+  <div class="grid">
+    <div class="card" data-aos="zoom-in"><iframe src="https://s.tradingview.com/embed-widget/market-overview/?locale=en"></iframe></div>
+    <div class="card" data-aos="zoom-in"><iframe src="https://s.tradingview.com/embed-widget/timeline/?locale=en"></iframe></div>
+    <div class="card" data-aos="zoom-in"><iframe src="https://s.tradingview.com/embed-widget/hotlists/?locale=en"></iframe></div>
+  </div>
+</section>
+
+<section>
+  <div class="title" data-aos="fade-up"><h2>Trading With Akash Indicator</h2></div>
+  <div class="grid">
+    <div class="card" data-aos="fade-right">
+      <p>The Trading With Akash Indicator is designed using a Data Engineer’s perspective. It filters market noise, highlights structure and high-probability zones. Suitable for beginners as well as professional traders across Indian Stock Market and Forex Market.</p>
+    </div>
+    <div class="card" data-aos="fade-left">
+      <iframe src="https://s.tradingview.com/embed-widget/advanced-chart/?symbol=NSE:NIFTY"></iframe>
+    </div>
+  </div>
+</section>
+
+<section class="stats">
+  <div class="stats-grid">
+    <div class="stat" data-aos="fade-up"><h3>1K+</h3><p>YouTube Subscribers</p></div>
+    <div class="stat" data-aos="fade-up"><h3>1200+</h3><p>Students Mentored</p></div>
+    <div class="stat" data-aos="fade-up"><h3>7+</h3><p>Years Experience</p></div>
+  </div>
+</section>
+
+<section>
+  <div class="title" data-aos="fade-up"><h2>About The CEO</h2></div>
+  <div class="card ceo" data-aos="fade-up">
+    <p><b>Akash Rajput</b> is the Founder & CEO of The Power Of Trading with 7+ years of experience in Indian Stock Market and Forex Market. His approach focuses on price action, psychology, risk control and consistency. His mission is to create disciplined traders with professional market understanding.</p>
+  <img src="images/akash.jpg" alt="Akash Rajput">
+
+  </div>
+</section>
+
+<footer>
+  <div class="footer-grid">
+    <div>
+      <h3>The Power Of Trading</h3>
+      <p>Office No. 320, Palaskheda, Maharashtra</p>
+      <p>Everyday: 10:00 AM – 7:00 PM</p>
+    </div>
+    <div>
+      <p><i class="fa-brands fa-whatsapp"></i> 7387347679</p>
+      <p><i class="fa-solid fa-envelope"></i> akashmr1111@gmail.com</p>
+      <p><i class="fa-brands fa-youtube"></i> YouTube Channel</p>
+    </div>
+  </div>
+</footer>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>AOS.init({duration:1200,once:true});</script>
+
 </body>
 </html>
 
