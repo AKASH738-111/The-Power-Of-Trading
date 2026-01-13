@@ -204,11 +204,23 @@
     </div>
   </div>
 
-  <!-- Forex Factory News -->
-  <div class="card" style="margin-top:60px" data-aos="fade-up">
-    <h3>Live Forex Factory – High Impact News</h3>
-    <iframe src="https://www.forexfactory.com/calendar" height="520"></iframe>
-    <p style="opacity:.7;margin-top:12px">News-driven volatility explained in live sessions</p>
+  <!-- TradingView Forex News -->
+<div class="tradingview-widget-container">
+  <div class="tradingview-widget-container__widget"></div>
+
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-news.js" async>
+  {
+    "feedMode": "all_symbols",
+    "colorTheme": "dark",
+    "isTransparent": true,
+    "displayMode": "regular",
+    "width": "100%",
+    "height": "450",
+    "locale": "en"
+  }
+  </script>
+</div>
+
   </div>
 </section>
 
