@@ -89,5 +89,36 @@
     font-size: 2.4rem;
   }
 }
+/* HERO IMAGE */
+.hero-image {
+  position: relative;
+}
+
+.hero-image img {
+  width: 380px;
+  height: 380px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center top;
+  border: 5px solid #f5c542;
+}
+
+/* GLOW EFFECT */
+.hero-image::before {
+  content: "";
+  position: absolute;
+  width: 420px;
+  height: 420px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(245,197,66,0.35), transparent 70%);
+  animation: pulse 3s infinite;
+  z-index: -1;
+}
+
+@keyframes pulse {
+  0% { transform: scale(0.95); opacity: 0.6; }
+  50% { transform: scale(1.05); opacity: 1; }
+  100% { transform: scale(0.95); opacity: 0.6; }
+}
 
 
