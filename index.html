@@ -3,144 +3,48 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The Power Of Trading</title>
+<title>The Power Of Trading | Premium Trading Education</title>
 
+<!-- Fonts & Icons -->
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{
-  font-family:'Inter',sans-serif;
-  background:#02040a;
-  color:#fff;
-  line-height:1.8;
-}
-section{
-  padding:120px 8%;
-  position:relative;
-}
-section::before{
-  content:'';
-  position:absolute;
-  inset:0;
-  background-size:cover;
-  background-position:center;
-  filter:blur(2px);
-  opacity:0.6;
-  z-index:1;
-}
-section::after{
-  content:'';
-  position:absolute;
-  inset:0;
-  background:linear-gradient(180deg,rgba(2,4,10,.8),rgba(2,4,10,.85));
-  z-index:2;
-}
-section > *{position:relative;z-index:3}
-
-h2{
-  font-family:'Playfair Display',serif;
-  font-size:46px;
-  margin-bottom:40px;
-}
-p{font-size:18px;margin-bottom:18px}
-
-.card{
-  background:linear-gradient(180deg,#0e1435,#050817);
-  border-radius:30px;
-  padding:60px;
-  box-shadow:0 40px 100px rgba(0,0,0,.8);
-}
-.grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-  gap:50px;
-}
-
-header{
-  position:fixed;top:0;width:100%;
-  background:rgba(2,4,10,.75);
-  backdrop-filter:blur(20px);
-  z-index:999;
-}
-.nav{
-  max-width:1400px;margin:auto;
-  padding:20px;
-  display:flex;justify-content:space-between;align-items:center;
-}
-.logo{
-  font-size:40px;
-  color:#f4c430;
-  font-weight:800;
-  font-family:'Playfair Display'
-}
+body{font-family:'Inter',sans-serif;background:radial-gradient(circle at top,#0b1025,#02040a);color:#fff;}
+section{padding:120px 8%}
+h2{font-family:'Playfair Display',serif;margin-bottom:40px}
+a{text-decoration:none;color:inherit}
+.card{background:linear-gradient(180deg,#0e1435,#050817);border-radius:28px;padding:50px;box-shadow:0 30px 80px rgba(0,0,0,.7);position:relative;}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:40px;}
+header{position:fixed;top:0;width:100%;background:rgba(2,4,10,.7);backdrop-filter:blur(18px);z-index:999;}
+.nav{max-width:1400px;margin:auto;padding:20px;display:flex;justify-content:space-between;align-items:center;}
+.logo{font-size:40px;color:#f4c430;font-weight:800;font-family:'Playfair Display'}
 .nav ul{list-style:none;display:flex;gap:30px}
-
-.hero{min-height:100vh;display:flex;align-items:center}
-.hero::before{
-  background-image:url("https://images.unsplash.com/photo-1531973968078-9bb02785f13d?auto=format&fit=crop&w=1400&q=80");
-}
-.hero h1{font-size:74px;margin-bottom:25px}
-.hero p{font-size:22px;margin-bottom:40px}
-
-.btn{
-  padding:18px 48px;
-  background:#f4c430;
-  color:#000;
-  border-radius:50px;
-  font-weight:700;
-  text-decoration:none;
-  display:inline-block;
-  transition:.3s;
-}
-.btn:hover{
-  transform:translateY(-6px);
-  box-shadow:0 20px 60px rgba(244,196,48,.5);
-}
-
-.glow{
-  border:1px solid rgba(244,196,48,.35);
-  box-shadow:0 0 40px rgba(244,196,48,.35);
-}
-
+.hero{min-height:100vh;display:flex;align-items:center;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1640340434855-6084e0f04a2f') center/cover;opacity:.25;filter:blur(4px);}
+.hero-content{position:relative;max-width:900px;z-index:2}
+.hero h1{font-size:72px;margin-bottom:20px}
+.hero p{font-size:20px;margin-bottom:40px}
+.btn{padding:16px 44px;background:#f4c430;color:#000;border-radius:40px;font-weight:700;display:inline-block;transition:0.35s;}
+.btn:hover{transform:translateY(-6px);box-shadow:0 20px 50px rgba(244,196,48,.6);}
+.glow{border:1px solid rgba(244,196,48,.3);box-shadow:0 0 35px rgba(244,196,48,.3);transition:0.4s;}
+.glow:hover{transform:scale(1.03);}
 .stat{text-align:center}
-.stat h3{font-size:60px;color:#f4c430}
-.review span{
-  color:#f4c430;
-  font-weight:600;
-  display:block;
-  margin-top:18px;
-}
+.stat h3{font-size:50px;color:#f4c430}
+.review span{color:#f4c430;font-weight:600;display:block;margin-top:15px;}
+footer{background:#02030a;padding:100px 8%;text-align:center}
+footer i{color:#f4c430;margin-right:10px}
 
-/* SECTION BACKGROUNDS */
-.about::before{
-  background-image:url("https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?auto=format&fit=crop&w=1400&q=80");
-}
-.courses::before{
-  background-image:url("https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1400&q=80");
-}
-.fii::before{
-  background-image:url("https://images.unsplash.com/photo-1559523161-0fc0d8b38a7a?auto=format&fit=crop&w=1400&q=80");
-}
-.reviews::before{
-  background-image:url("https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1400&q=80");
-}
-.stats::before{
-  background-image:url("https://images.unsplash.com/photo-1523952578875-6b22b01c6f42?auto=format&fit=crop&w=1400&q=80");
-}
-.contact::before{
-  background-image:url("https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1400&q=80");
-}
-
-footer{
-  background:#02030a;
-  padding:80px 8%;
-}
+/* Background images for sections */
+.about-bg::before, .courses-bg::before, .reviews-bg::before{
+content:'';position:absolute;inset:0;background-size:cover;background-position:center;opacity:.15;filter:blur(4px);z-index:0;border-radius:28px;}
+.about-bg::before{background-image:url('https://images.unsplash.com/photo-1596496058563-343b44c3624f');}
+.courses-bg::before{background-image:url('https://images.unsplash.com/photo-1554224154-22dec7ec8818');}
+.reviews-bg::before{background-image:url('https://images.unsplash.com/photo-1581092795366-cf4076a1b00d');}
 </style>
 </head>
-
 <body>
 
 <header>
@@ -153,108 +57,68 @@ footer{
 </header>
 
 <!-- HERO -->
-<section class="hero">
-<div data-aos="fade-up">
-<h1>India’s Most Trusted Trading Education Platform</h1>
-<p>
-The Power Of Trading is not just a course — it is a complete ecosystem designed to
-transform beginners into confident, disciplined and professional traders.
-</p>
-<a href="#" class="btn">Enroll Now</a>
+<section class="hero" data-aos="fade-up">
+<div class="hero-content">
+<h1>India’s Premium Trading Education Platform</h1>
+<p>Turning beginners into professional traders using data-driven systems, institutional logic & real market experience.</p>
+<a class="btn" href="#">Enroll Now</a>
 </div>
 </section>
 
 <!-- ABOUT -->
-<section class="about">
+<section class="about-bg">
 <h2 data-aos="fade-up">About The Power Of Trading</h2>
 <div class="card glow" data-aos="fade-up">
-
-<p>
-<b>The Power Of Trading</b> was created with a single vision — to remove confusion,
-emotions, and randomness from trading and replace it with logic, data, discipline
-and consistency.
-</p>
-
-<p>
-Founded by <b>Akash Rajput</b>, a professional trader and <b>Data Engineer</b> with
-<b>7+ years of experience</b> in the Indian Stock & Forex Market. Akash has personally
-mentored over <b>1000+ students</b> into professional traders.
-</p>
-
-<p>
-This platform is unique because it combines technology, market psychology,
-institutional strategy, and real data analysis to teach trading as a business.
-Students learn step-by-step how smart money moves, price action, and risk
-management, not just indicators or shortcuts.
-</p>
-
-<p>
-Students who complete this program are able to:
-<ul>
-<li>Analyze charts professionally and identify high-probability trades</li>
-<li>Understand institutional market flows and FII/DII activities</li>
-<li>Trade Forex and Indian Stock Markets confidently</li>
-<li>Develop discipline, mindset & consistency</li>
-<li>Use data-engineered systems even as beginners</li>
-</ul>
-</p>
-
-<p>
-The curriculum includes market basics, technicals, fundamentals, price action,
-candlestick psychology, risk control, trade execution, and advanced professional strategies.
-This is one of the few platforms where students can actually learn to earn
-professionally in India.
-</p>
-
-<p>
-By reading this section carefully, a new student can spend 30–60 minutes
-understanding the depth of our approach and methodology.
-</p>
-
+<p><b>The Power Of Trading</b> is India’s most advanced trading education platform combining <b>data science, market psychology, and technology</b> for beginners to professionals.</p>
+<p>Founded by <b>Akash Rajput</b>, a Data Engineer & trader with <b>7+ years experience</b> in Indian & Forex markets, he has mentored <b>1000+ students</b> to become disciplined, professional traders.</p>
+<p>Using proprietary systems, even students with zero prior knowledge can analyze charts, identify trends, and trade confidently. Courses focus on <b>risk management, price action, and institutional logic</b>.</p>
+<p>Our mission: Build traders who can consistently earn, understand market psychology, and execute trades professionally from anywhere in India.</p>
 </div>
 </section>
 
 <!-- COURSES -->
-<section class="courses">
+<section class="courses courses-bg">
 <h2 data-aos="fade-up">Our Courses</h2>
 <div class="grid">
 
-<div class="card glow" data-aos="fade-right">
+<div class="card glow" data-aos="fade-right" style="transition: transform 0.4s;" onmouseover="this.style.transform='translateY(-10px) scale(1.03)';" onmouseout="this.style.transform='translateY(0) scale(1)'">
 <h3>Basic Trading Course</h3>
-<p>
-Learn the foundations of trading: market basics, chart reading,
-candlestick psychology, support/resistance, and beginner-friendly strategies.
-</p>
-<p>
-By the end, students are able to make informed decisions and manage risk confidently.
-</p>
+<p>Learn market basics, candlestick patterns, support/resistance, risk management, and beginner-friendly strategies.</p>
+<ul>
+<li>Analyze charts & trends</li>
+<li>Identify high-probability setups</li>
+<li>Manage risk professionally</li>
+<li>Trade confidently in live markets</li>
+<li>Understanding market psychology</li>
+</ul>
+<p>Duration: 4 weeks | Beginner-friendly | Lifetime access to recordings & updates</p>
 </div>
 
-<div class="card glow" data-aos="fade-left">
+<div class="card glow" data-aos="fade-left" style="transition: transform 0.4s;" onmouseover="this.style.transform='translateY(-10px) scale(1.03)';" onmouseout="this.style.transform='translateY(0) scale(1)'">
 <h3>Premium Professional Course</h3>
-<p>
-Advanced professional-level course covering institutional logic, data-driven
-execution, Forex + Indian Markets, psychology, live trading framework,
-and advanced risk management.
-</p>
-<p>
-This course prepares serious traders to operate as professionals with
-structured systems for consistent income.
-</p>
+<p>Advanced professional course covering institutional logic, data-driven execution, Forex + Indian Markets, live trading framework, psychology & discipline.</p>
+<ul>
+<li>FII/DII Flow Analysis</li>
+<li>Advanced risk & money management</li>
+<li>Trade high-probability setups professionally</li>
+<li>Develop systematic trading mindset</li>
+<li>Automation & tech-based strategies</li>
+</ul>
+<p>Duration: 12 weeks | Live mentorship | Certification on completion | Access to trading tools</p>
 </div>
 
 </div>
 </section>
 
-<!-- FII DII -->
-<section class="fii">
+<!-- FII/DII -->
+<section>
 <h2 data-aos="fade-up">FII / DII Daily Activity</h2>
 <div class="grid">
-<div class="card glow">
+<div class="card glow" data-aos="fade-right">
 <h3>FII</h3>
 <p>Net Buy : ₹ +2,145 Cr</p>
 </div>
-<div class="card glow">
+<div class="card glow" data-aos="fade-left">
 <h3>DII</h3>
 <p>Net Sell : ₹ -1,320 Cr</p>
 </div>
@@ -262,44 +126,74 @@ structured systems for consistent income.
 </section>
 
 <!-- REVIEWS -->
-<section class="reviews">
+<section class="reviews reviews-bg">
 <h2 data-aos="fade-up">Student Reviews</h2>
 <div class="grid">
-<div class="card glow review">System bahut logical hai.<span>Purvesh Shevgan, Maharashtra</span></div>
-<div class="card glow review">Confidence aur discipline aaya.<span>Pawan Kotwal, Maharashtra</span></div>
-<div class="card glow review">Loss control sikha.<span>Avanish Singh, Uttar Pradesh</span></div>
-<div class="card glow review">Mindset change hua.<span>Naresh, Karnataka</span></div>
-<div class="card glow review">Simple & powerful system.<span>Shubham, Uttar Pradesh</span></div>
-<div class="card glow review">Trading business ban gayi.<span>Suraj Rajput, Sambhaji Nagar</span></div>
+
+<div class="card glow review" data-aos="zoom-in" style="transition: transform 0.4s;" onmouseover="this.style.transform='translateY(-8px) scale(1.02)';" onmouseout="this.style.transform='translateY(0) scale(1)'">
+<i class="fa-solid fa-star" style="color:#f4c430;"></i><i class="fa-solid fa-star" style="color:#f4c430;"></i><i class="fa-solid fa-star" style="color:#f4c430;"></i><i class="fa-solid fa-star" style="color:#f4c430;"></i><i class="fa-solid fa-star-half-stroke" style="color:#f4c430;"></i>
+<p>"System bahut logical hai aur charts easily samajh aate hain."</p>
+<span>Purvesh Shevgan, Maharashtra</span>
+</div>
+
+<div class="card glow review" data-aos="zoom-in" style="transition: transform 0.4s;" onmouseover="this.style.transform='translateY(-8px) scale(1.02)';" onmouseout="this.style.transform='translateY(0) scale(1)'">
+<i class="fa-solid fa-star" style="color:#f4c430;"></i><i class="fa-solid fa-star" style="color:#f4c430;"></i><i class="fa-solid fa-star" style="color:#f4c430;"></i><i class="fa-solid fa-star" style="color:#f4c430;"></i><i class="fa-solid fa-star" style="color:#f4c430;"></i>
+<p>"Confidence aur discipline aaya, trading ka approach completely change ho gaya."</p>
+<span>Pawan Kotwal, Maharashtra</span>
+</div>
+
+<div class="card glow review" data-aos="zoom-in" style="transition: transform 0.4s;" onmouseover="this.style.transform='translateY(-8px) scale(1.02)';" onmouseout="this.style.transform='translateY(0) scale(1)'">
+<i class="fa-solid fa-star" style="color:#f4c430;"></i><i class="fa-solid fa-star" style="color:#f4c430;"></i><i class="fa-solid fa-star" style="color:#f4c430;"></i><i class="fa-solid fa-star" style="color:#f4c430;"></i><i class="fa-solid fa-star" style="color:#f4c430;"></i>
+<p>"Loss control aur risk management sikhaya gaya perfectly."</p>
+<span>Avanish Singh, Uttar Pradesh</span>
+</div>
+
+<div class="card glow review" data-aos="zoom-in" style="transition: transform 0.4s;" onmouseover="this.style.transform='translateY(-8px) scale(1.02)';" onmouseout="this.style.transform='translateY(0) scale(1)'">
+<i class="fa-solid fa-star" style="color:#f4c430;"></i><i class="fa-solid fa-star" style="color:#f4c430;"></i><i class="fa-solid fa-star" style="color:#f4c430;"></i><i class="fa-solid fa-star" style="color:#f4c430;"></i><i class="fa-solid fa-star-half-stroke" style="color:#f4c430;"></i>
+<p>"Professional mindset aur strategic thinking develop hui."</p>
+<span>Naresh, Karnataka</span>
+</div>
+
+<div class="card glow review" data-aos="zoom-in" style="transition: transform 0.4s;" onmouseover="this.style.transform='translateY(-8px) scale(1.02)';" onmouseout="this.style.transform='translateY(0) scale(1)'">
+<i class="fa-solid fa-star" style="color:#f4c430;"></i><i class="fa-solid fa-star" style="color:#f4c430;"></i><i class="fa-solid fa-star" style="color:#f4c430;"></i><i class="fa-solid fa-star" style="color:#f4c430;"></i><i class="fa-solid fa-star" style="color:#f4c430;"></i>
+<p>"Simple aur effective system, ghar baithe easily trade kar sakte hain."</p>
+<span>Shubham, Uttar Pradesh</span>
+</div>
+
+<div class="card glow review" data-aos="zoom-in" style="transition: transform 0.4s;" onmouseover="this.style.transform='translateY(-8px) scale(1.02)';" onmouseout="this.style.transform='translateY(0) scale(1)'">
+<i class="fa-solid fa-star" style="color:#f4c430;"></i><i class="fa-solid fa-star" style="color:#f4c430;"></i><i class="fa-solid fa-star" style="color:#f4c430;"></i><i class="fa-solid fa-star" style="color:#f4c430;"></i><i class="fa-solid fa-star-half-stroke" style="color:#f4c430;"></i>
+<p>"Trading ka business jaisa lagne laga, highly recommend."</p>
+<span>Suraj Rajput, Sambhaji Nagar</span>
+</div>
+
 </div>
 </section>
 
 <!-- STATS -->
-<section class="stats">
+<section>
 <div class="grid">
-<div class="card stat glow">
+<div class="card stat glow" data-aos="fade-up">
+<h3><i class="fa-brands fa-youtube"></i></h3>
+<p>1K+ YouTube Subscribers</p>
+</div>
+<div class="card stat glow" data-aos="fade-up">
 <h3>1000+</h3>
 <p>Students Mentored</p>
-</div>
-<div class="card stat glow">
-<h3><i class="fa-brands fa-youtube"></i></h3>
-<p>1K+ Subscribers</p>
 </div>
 </div>
 </section>
 
 <!-- CONTACT -->
-<section class="contact">
-<h2>Contact & Office Details</h2>
-<div class="card glow">
+<section>
+<h2 data-aos="fade-up">Contact & Office Details</h2>
+<div class="card glow" data-aos="fade-up">
 <p>
-<b>Office:</b> Office No. 420, Behind Sant Tukaram Sabhagruh,<br>
-Palaskheda, Aurangabad, Maharashtra
-</p>
-<p>
+<b>Office Address:</b><br>
+Office No. 420, Behind Sant Tukaram Sabhagruh,<br>
+Palaskheda, Aurangabad, Maharashtra<br><br>
 <b>Mobile:</b> 7387347679<br>
 <b>Email:</b> akashmr738@gmail.com<br>
-<b>Time:</b> 7 AM – 8 PM
+<b>Time:</b> 7 AM to 8 PM
 </p>
 </div>
 </section>
@@ -309,12 +203,11 @@ Palaskheda, Aurangabad, Maharashtra
 </footer>
 
 <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-<script>
-AOS.init({duration:1200,once:true});
-</script>
+<script>AOS.init({duration:1200,once:true});</script>
 
 </body>
 </html>
+
 
 
 
