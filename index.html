@@ -15,10 +15,12 @@ body{
   font-family:'Inter',sans-serif;
   background:radial-gradient(circle at top,#0b1025,#02040a);
   color:#fff;
+  overflow-x:hidden;
 }
-section{padding:120px 8%}
+section{padding:120px 8%;position:relative}
 h2{font-family:'Playfair Display',serif;font-size:46px;margin-bottom:30px}
 p{font-size:17px;line-height:1.9;color:#e0e0e0}
+
 .card{
   background:linear-gradient(180deg,#0e1435,#050817);
   border-radius:28px;
@@ -26,8 +28,15 @@ p{font-size:17px;line-height:1.9;color:#e0e0e0}
   box-shadow:0 30px 80px rgba(0,0,0,.7);
   transition:.4s;
 }
-.card:hover{transform:translateY(-8px)}
+.card:hover{transform:translateY(-10px)}
+
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:40px}
+
+.glow{
+  border:1px solid rgba(244,196,48,.25);
+  box-shadow:0 0 40px rgba(244,196,48,.25);
+}
+
 header{
   position:fixed;top:0;width:100%;
   background:rgba(2,4,10,.7);
@@ -44,19 +53,23 @@ header{
   font-weight:800;font-family:'Playfair Display'
 }
 .nav ul{list-style:none;display:flex;gap:30px}
-.nav li{cursor:pointer}
 
+/* HERO */
 .hero{
-  min-height:100vh;display:flex;align-items:center;position:relative
+  min-height:100vh;display:flex;align-items:center;
 }
 .hero::before{
   content:'';position:absolute;inset:0;
-  background:url('https://images.unsplash.com/photo-1640340434855-6084e0f04a2f') center/cover;
+  background:url('images/hero.jpg') center/cover;
   opacity:.25;
+}
+.hero::after{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(to bottom,rgba(0,0,0,.3),rgba(2,4,10,.95));
 }
 .hero-content{position:relative;max-width:900px}
 .hero h1{font-size:72px;margin-bottom:25px}
-.hero p{font-size:21px;margin-bottom:45px;max-width:700px}
+.hero p{font-size:21px;margin-bottom:45px}
 
 .btn{
   padding:16px 44px;
@@ -67,16 +80,43 @@ header{
   display:inline-block;
 }
 
-.glow{
-  border:1px solid rgba(244,196,48,.3);
-  box-shadow:0 0 35px rgba(244,196,48,.25);
+/* BACKGROUND SECTIONS */
+.about-bg,
+.courses-bg,
+.reviews-bg{
+  background-size:cover;
+  background-position:center;
 }
+.about-bg{background-image:url('images/students-blur.jpg')}
+.courses-bg{background-image:url('images/trading-charts.jpg')}
+.reviews-bg{background-image:url('images/reviews-students.jpg');background-attachment:fixed}
 
+.about-bg::before,
+.courses-bg::before,
+.reviews-bg::before{
+  content:'';
+  position:absolute;
+  inset:0;
+  background:rgba(2,4,15,.88);
+  backdrop-filter:blur(6px);
+}
+.about-bg>*,
+.courses-bg>*,
+.reviews-bg>*{position:relative}
+
+/* STATS */
 .stat{text-align:center}
 .stat h3{font-size:50px;color:#f4c430}
 
-.review span{color:#f4c430;font-weight:600;display:block;margin-top:18px}
+/* REVIEW */
+.review span{
+  color:#f4c430;
+  font-weight:600;
+  display:block;
+  margin-top:18px;
+}
 
+/* FOOTER */
 footer{
   background:#02030a;
   padding:100px 8%;
@@ -101,207 +141,97 @@ footer i{color:#f4c430;margin-right:10px}
 <section class="hero">
 <div class="hero-content" data-aos="fade-up">
 <h1>India’s Most Trusted Trading Education Platform</h1>
-<p>
-We don’t sell dreams.  
-We build **skills, discipline and systems** that help traders survive, grow and stay profitable in real markets.
-</p>
-<a class="btn">Start Your Trading Journey</a>
+<p>We build disciplined, data-driven traders — not tip-hunters.</p>
+<a class="btn">Start Learning</a>
 </div>
 </section>
 
 <!-- ABOUT -->
-<section>
+<section class="about-bg">
 <h2 data-aos="fade-up">About The Power Of Trading</h2>
 <div class="card glow" data-aos="fade-up">
-
 <p>
-<b>The Power Of Trading</b> is not just another trading course — it is a **complete learning ecosystem**
-designed for people who want clarity, structure and long-term consistency in financial markets.
+<b>The Power Of Trading</b> is a professional trading education platform founded by <b>Akash Rajput</b>,
+a trader with <b>7+ years of experience</b> in Indian & Forex markets.
 </p>
-
 <p>
-This platform was founded by <b>Akash Rajput</b>, a professional trader with <b>7+ years of deep experience</b>
-across the <b>Indian stock market and the global Forex market</b>.
-Like most traders, Akash’s journey began with confusion, emotional trading and losses.
-But instead of quitting, he chose to study markets from their core — using data, logic and probability.
+Akash Rajput is also a <b>Data Engineer</b>. Using technology, statistics and real-market execution,
+he created a system where even beginners can trade with clarity and discipline.
 </p>
-
 <p>
-Apart from trading, Akash is also a <b>Data Engineer</b>.
-This technical background gave him a unique advantage —
-he started observing markets the same way engineers analyze systems.
-He studied price behavior, institutional money flow, volume patterns,
-time-based movements and trader psychology.
+This platform has mentored <b>1000+ students</b> across India, helping them convert confusion into confidence,
+and trading into a structured business.
 </p>
-
 <p>
-After years of research, testing and real-market execution,
-he built a <b>rule-based trading framework</b> that removes guesswork.
-This system allows even beginners — people who have never traded before —
-to understand when to trade, when not to trade and how to manage risk professionally.
+Our mission is to eliminate emotional trading and build long-term consistent traders using logic, rules and mindset.
 </p>
-
-<p>
-Till today, <b>1000+ students from different parts of India</b> have been personally mentored.
-Many of them were beginners, working professionals or people who had previously failed in trading.
-With the right structure and mindset, they learned to treat trading like a business — not gambling.
-</p>
-
-<p>
-<b>The Power Of Trading</b> is one of the very few platforms in India
-where technology, discipline and market psychology come together.
-Our mission is simple:
-<br><br>
-✔ Remove fear from trading  
-<br>
-✔ Teach logic instead of tips  
-<br>
-✔ Build independent traders, not dependent followers  
-<br>
-✔ Create long-term consistency, not short-term excitement  
-</p>
-
-<p>
-If you are serious about learning how markets actually work,
-this platform is built for you.
-</p>
-
 </div>
 </section>
 
 <!-- COURSES -->
-<section>
+<section class="courses-bg">
 <h2 data-aos="fade-up">Our Courses</h2>
 <div class="grid">
-
 <div class="card glow" data-aos="fade-right">
 <h3>Basic Trading Course</h3>
 <p>
-This course is specially designed for beginners.
-It builds a strong foundation so that students understand markets clearly before risking capital.
-<br><br>
-✔ Market structure explained simply  
-<br>
-✔ Candlestick & price behavior psychology  
-<br>
-✔ Support & resistance clarity  
-<br>
-✔ Risk management rules  
-<br>
-✔ Confidence & discipline building  
+Market basics, candlestick psychology, support-resistance,
+risk management and beginner-friendly execution system.
 </p>
 </div>
-
 <div class="card glow" data-aos="fade-left">
 <h3>Premium Professional Course</h3>
 <p>
-This is a complete professional-level trading system.
-Designed for serious learners who want consistency and scalability.
-<br><br>
-✔ Institutional & smart money concepts  
-<br>
-✔ Data-driven trade models  
-<br>
-✔ Indian + Forex market strategies  
-<br>
-✔ Emotional control & mindset mastery  
-<br>
-✔ Live execution & system-based decision making  
+Institutional concepts, data-driven strategies,
+Indian + Forex markets, psychology & live execution framework.
 </p>
 </div>
-
 </div>
 </section>
 
-<!-- FII DII + GOLD SILVER -->
+<!-- DAILY DATA -->
 <section>
-<h2 data-aos="fade-up">Daily Market Insight</h2>
+<h2 data-aos="fade-up">Daily Market Snapshot</h2>
 <div class="grid">
-
-<div class="card glow" data-aos="fade-right">
-<h3>FII Activity</h3>
-<p id="fii">FII = ₹ +2,145 Cr</p>
-<p>Foreign institutions indicate global sentiment and long-term market direction.</p>
-</div>
-
-<div class="card glow" data-aos="fade-left">
-<h3>DII Activity</h3>
-<p id="dii">DII = ₹ -1,320 Cr</p>
-<p>Domestic institutions help understand internal market strength and support zones.</p>
-</div>
-
-<div class="card glow" data-aos="fade-right">
-<h3>Gold Price</h3>
-<p id="gold">Gold = $5893</p>
-<p>Gold reflects global risk sentiment and macro-economic pressure.</p>
-</div>
-
-<div class="card glow" data-aos="fade-left">
-<h3>Silver Price</h3>
-<p id="silver">Silver = $71.20</p>
-<p>Silver often leads industrial and inflation-based movements.</p>
-</div>
-
+<div class="card glow"><h3>FII = ₹ +2,145 Cr</h3></div>
+<div class="card glow"><h3>DII = ₹ -1,320 Cr</h3></div>
+<div class="card glow"><h3>Gold = $5893</h3></div>
+<div class="card glow"><h3>Silver = $71.20</h3></div>
 </div>
 </section>
 
 <!-- REVIEWS -->
-<section>
+<section class="reviews-bg">
 <h2 data-aos="fade-up">Student Reviews</h2>
 <div class="grid">
-<div class="card glow review" data-aos="zoom-in">
-System bahut logical hai aur emotions control hue.
-<span>Purvesh Shevgan, Maharashtra</span>
-</div>
-<div class="card glow review" data-aos="zoom-in">
-Trading ab business jaisi lagti hai.
-<span>Pawan Kotwal, Maharashtra</span>
-</div>
-<div class="card glow review" data-aos="zoom-in">
-Loss kam hua aur confidence badha.
-<span>Avanish Singh, Uttar Pradesh</span>
-</div>
-<div class="card glow review" data-aos="zoom-in">
-Professional thinking develop hui.
-<span>Naresh, Karnataka</span>
-</div>
-<div class="card glow review" data-aos="zoom-in">
-Simple rules, powerful system.
-<span>Shubham, Uttar Pradesh</span>
-</div>
-<div class="card glow review" data-aos="zoom-in">
-Real mentorship, no fake promises.
-<span>Suraj Rajput, Sambhaji Nagar</span>
-</div>
+<div class="card glow review">Logical system, confidence aaya.<span>Purvesh Shevgan, Maharashtra</span></div>
+<div class="card glow review">Trading ab business jaisi lagti hai.<span>Pawan Kotwal, Maharashtra</span></div>
+<div class="card glow review">Loss control sikha.<span>Avanish Singh, Uttar Pradesh</span></div>
+<div class="card glow review">Professional mindset develop hua.<span>Naresh, Karnataka</span></div>
+<div class="card glow review">Simple & powerful rules.<span>Shubham, Uttar Pradesh</span></div>
+<div class="card glow review">Real mentorship, no fake hype.<span>Suraj Rajput, Sambhaji Nagar</span></div>
 </div>
 </section>
 
 <!-- STATS -->
 <section>
 <div class="grid">
-<div class="card stat glow" data-aos="fade-up">
-<h3><i class="fa-brands fa-youtube"></i></h3>
-<p>1K+ YouTube Subscribers</p>
-</div>
-<div class="card stat glow" data-aos="fade-up">
-<h3>1000+</h3>
-<p>Students Mentored Successfully</p>
-</div>
+<div class="card stat glow"><h3><i class="fa-brands fa-youtube"></i></h3><p>1K+ Subscribers</p></div>
+<div class="card stat glow"><h3>1000+</h3><p>Students Mentored</p></div>
 </div>
 </section>
 
 <!-- CONTACT -->
 <section>
-<h2 data-aos="fade-up">Contact & Office Details</h2>
-<div class="card glow" data-aos="fade-up">
+<h2 data-aos="fade-up">Contact & Office</h2>
+<div class="card glow">
 <p>
-<b>Office Address:</b><br>
-Office No. 420, Behind Sant Tukaram Sabhagruh,<br>
+<b>Office:</b> Office No. 420, Behind Sant Tukaram Sabhagruh,<br>
 Palaskheda, Aurangabad, Maharashtra
 <br><br>
 <b>Mobile:</b> 7387347679<br>
 <b>Email:</b> akashmr738@gmail.com<br>
-<b>Working Time:</b> 7 AM – 8 PM
+<b>Time:</b> 7 AM – 8 PM
 </p>
 </div>
 </section>
@@ -313,12 +243,11 @@ Palaskheda, Aurangabad, Maharashtra
 <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 <script>
 AOS.init({duration:1300,once:true});
-
-// later yahan real API connect ki ja sakti hai
 </script>
 
 </body>
 </html>
+
 
 
 
