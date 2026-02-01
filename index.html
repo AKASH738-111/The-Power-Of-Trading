@@ -2,169 +2,269 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>The Power Of Trading | Akash Rajput</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Power Of Trading</title>
 
-<!-- SEO -->
-<meta name="description" content="The Power Of Trading by Akash Rajput – 7+ years experience in Indian & Forex Market. 1000+ students mentored. Learn smart trading with data-driven systems.">
-<meta name="keywords" content="Trading Course India, Forex Trading, Gold Silver Rates, FII DII Data, Akash Rajput">
-
-<!-- GOOGLE FONT -->
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
-body{background:#02040f;color:#fff;line-height:1.8}
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  font-family:'Inter',sans-serif;
+  background:#02040a;
+  color:#fff;
+}
+section{
+  padding:120px 8%;
+  position:relative;
+  overflow:hidden;
+}
+section::before{
+  content:'';
+  position:absolute;
+  inset:0;
+  background-size:cover;
+  background-position:center;
+  opacity:.22;
+}
+section::after{
+  content:'';
+  position:absolute;
+  inset:0;
+  background:linear-gradient(180deg,#02040acc,#02040a);
+}
+section > *{position:relative;z-index:2}
 
-/* GLOBAL */
-section{padding:80px 8%}
-h1,h2{color:#ffd166}
-p{opacity:.95}
+h2{font-family:'Playfair Display',serif}
+
+.card{
+  background:linear-gradient(180deg,#0e1435,#050817);
+  border-radius:28px;
+  padding:50px;
+  box-shadow:0 30px 80px rgba(0,0,0,.7);
+}
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  gap:40px
+}
+
+/* HEADER */
+header{
+  position:fixed;top:0;width:100%;
+  background:rgba(2,4,10,.7);
+  backdrop-filter:blur(18px);
+  z-index:999;
+}
+.nav{
+  max-width:1400px;margin:auto;
+  padding:20px;
+  display:flex;justify-content:space-between;align-items:center;
+}
+.logo{
+  font-size:40px;color:#f4c430;
+  font-weight:800;font-family:'Playfair Display'
+}
+.nav ul{list-style:none;display:flex;gap:30px}
 
 /* HERO */
 .hero{
-min-height:100vh;
-background:
-linear-gradient(rgba(2,4,15,.75),rgba(2,4,15,.9)),
-url('https://images.unsplash.com/photo-1559523161-0fc0d8b38a7a') center/cover;
-display:flex;align-items:center;
-animation:zoom 18s infinite alternate;
+  min-height:100vh;
+  display:flex;align-items:center
 }
-@keyframes zoom{from{background-size:100%}to{background-size:115%}}
+.hero::before{
+  background:url('https://images.unsplash.com/photo-1640340434855-6084e0f04a2f');
+}
+.hero-content{max-width:900px}
+.hero h1{font-size:72px;margin-bottom:20px}
+.hero p{font-size:20px;margin-bottom:40px}
 
-.hero h1{font-size:3rem}
-.hero span{color:#06d6a0}
+.btn{
+  padding:16px 44px;
+  background:#f4c430;
+  color:#000;
+  border-radius:40px;
+  font-weight:700;
+  display:inline-block;
+}
+
+.glow{
+  border:1px solid rgba(244,196,48,.3);
+  box-shadow:0 0 35px rgba(244,196,48,.3);
+}
 
 /* ABOUT */
-.about{
-background:
-linear-gradient(rgba(2,4,15,.7),rgba(2,4,15,.9)),
-url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d') center/cover fixed;
-animation:fadeUp 1.5s;
-}
-@keyframes fadeUp{from{opacity:0;transform:translateY(60px)}to{opacity:1;transform:none}}
-
-/* INFO BOX */
-.info-box{
-background:rgba(255,255,255,.05);
-padding:25px;border-radius:14px;
-margin-top:25px;
-backdrop-filter:blur(8px);
+.about::before{
+  background:url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d');
 }
 
-/* DATA BAR */
-.data-bar{
-display:flex;gap:20px;flex-wrap:wrap;margin-top:25px
+/* COURSES */
+.courses::before{
+  background:url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3');
 }
-.data{
-flex:1;min-width:180px;
-background:#111827;
-padding:20px;border-radius:12px;
-text-align:center;
-font-size:1.1rem;
+
+/* FII DII */
+.fii::before{
+  background:url('https://images.unsplash.com/photo-1559523161-0fc0d8b38a7a');
 }
 
 /* REVIEWS */
-.reviews{
-background:
-linear-gradient(rgba(2,4,15,.75),rgba(2,4,15,.9)),
-url('https://images.unsplash.com/photo-1523580846011-d3a5bc25702b') center/cover;
+.reviews::before{
+  background:url('https://images.unsplash.com/photo-1523580846011-d3a5bc25702b');
 }
-.review-card{
-background:rgba(255,255,255,.06);
-padding:22px;border-radius:14px;
-margin:15px 0;
-animation:float 5s infinite alternate;
-}
-@keyframes float{from{transform:translateY(0)}to{transform:translateY(-12px)}}
 
-/* FOOTER */
-footer{
-background:#01030a;
-padding:40px 8%;
-text-align:center;
+/* STATS */
+.stats::before{
+  background:url('https://images.unsplash.com/photo-1523952578875-6b22b01c6f42');
 }
-footer span{color:#ffd166}
+
+/* CONTACT */
+.contact::before{
+  background:url('https://images.unsplash.com/photo-1521791136064-7986c2920216');
+}
+
+.stat{text-align:center}
+.stat h3{font-size:50px;color:#f4c430}
+
+.review span{
+  color:#f4c430;
+  font-weight:600;
+  display:block;
+  margin-top:15px
+}
+
+footer{
+  background:#02030a;
+  padding:100px 8%;
+}
 </style>
 </head>
 
 <body>
 
+<header>
+<div class="nav">
+<div class="logo"><i class="fa-solid fa-bull"></i> The Power Of Trading</div>
+<ul>
+<li>Home</li><li>Courses</li><li>Reviews</li><li>Contact</li>
+</ul>
+</div>
+</header>
+
 <!-- HERO -->
 <section class="hero">
-<div>
-<h1>The Power Of Trading<br><span>By Akash Rajput</span></h1>
-<p>India’s first data-driven trading education ecosystem.</p>
+<div class="hero-content" data-aos="fade-up">
+<h1>India’s Most Trusted Trading Education Platform</h1>
+<p>Turning beginners into professional traders using data-driven systems & institutional logic.</p>
+<a class="btn">Enroll Now</a>
 </div>
 </section>
 
 <!-- ABOUT -->
 <section class="about">
-<h2>About The Founder</h2>
-
-<div class="info-box">
+<h2 data-aos="fade-up">About The Power Of Trading</h2><br>
+<div class="card glow" data-aos="fade-up">
 <p>
-Akash Rajput is the founder of <b>The Power Of Trading</b> with more than <b>7+ years of solid experience</b> in Indian Stock Market and Forex Market.
-Over the years, he has mentored <b>1000+ students</b> and transformed beginners into confident professional traders.
+<b>The Power Of Trading</b> is India’s first education platform where technology,
+data engineering and market psychology are combined.
+<br><br>
+Founded by <b>Akash Rajput</b>, a professional trader with <b>7+ years experience</b>
+in Indian & Forex Market.
+<br><br>
+Till date <b>1000+ students</b> have been mentored using a rule-based system.
 </p>
+</div>
+</section>
 
+<!-- COURSES -->
+<section class="courses">
+<h2 data-aos="fade-up">Our Courses</h2><br>
+<div class="grid">
+<div class="card glow" data-aos="fade-right">
+<h3>Basic Trading Course</h3>
 <p>
-Akash Rajput is also a <b>Data Engineer</b>. By combining market psychology, price action and advanced data systems,
-he built a unique trading framework where even non-traders can participate in the market safely.
-This system removes emotional trading and replaces it with rule-based decision making.
-</p>
-
-<p>
-This is India’s first course where <b>technology + trading</b> works together, allowing students to learn, execute
-and grow consistently from home.
+✔ Market Basics<br>
+✔ Candlestick Psychology<br>
+✔ Support & Resistance<br>
+✔ Risk Management
 </p>
 </div>
 
-<div class="data-bar">
-<div class="data">Gold = $<span id="gold">5893</span></div>
-<div class="data">Silver = $<span id="silver">72.45</span></div>
-<div class="data">FII = ₹<span id="fii">+2,345 Cr</span></div>
-<div class="data">DII = ₹<span id="dii">-1,120 Cr</span></div>
+<div class="card glow" data-aos="fade-left">
+<h3>Premium Professional Course</h3>
+<p>
+✔ Institutional Concepts<br>
+✔ Data-Driven Strategy<br>
+✔ Forex + Indian Market<br>
+✔ Psychology
+</p>
+</div>
+</div>
+</section>
+
+<!-- FII DII -->
+<section class="fii">
+<h2 data-aos="fade-up">FII / DII Daily Activity</h2><br>
+<div class="grid">
+<div class="card glow" data-aos="fade-right">
+<h3>FII</h3>
+<p>Net Buy : ₹ +2,145 Cr</p>
+</div>
+<div class="card glow" data-aos="fade-left">
+<h3>DII</h3>
+<p>Net Sell : ₹ -1,320 Cr</p>
+</div>
 </div>
 </section>
 
 <!-- REVIEWS -->
 <section class="reviews">
-<h2>Student Reviews</h2>
-
-<div class="review-card">⭐ Purvesh Shevgan (Maharashtra) – “Best trading mentorship I’ve ever experienced.”</div>
-<div class="review-card">⭐ Pawan Kotwal (Maharashtra) – “Very practical and data-based learning.”</div>
-<div class="review-card">⭐ Avanish Singh (Uttar Pradesh) – “Perfect for beginners.”</div>
-<div class="review-card">⭐ Naresh (Karnataka) – “Systematic trading changed my mindset.”</div>
-<div class="review-card">⭐ Shubham (Uttar Pradesh) – “Clear rules, no confusion.”</div>
-<div class="review-card">⭐ Suraj Rajput (Sambhaji Nagar) – “Highly professional guidance.”</div>
+<h2 data-aos="fade-up">Student Reviews</h2><br>
+<div class="grid">
+<div class="card glow" data-aos="zoom-in">System bahut logical hai.<span>Purvesh, MH</span></div>
+<div class="card glow" data-aos="zoom-in">Confidence aaya.<span>Pawan, MH</span></div>
+<div class="card glow" data-aos="zoom-in">Loss control sikha.<span>Avanish, UP</span></div>
+</div>
 </section>
 
-<!-- FOOTER -->
+<!-- STATS -->
+<section class="stats">
+<div class="grid">
+<div class="card stat glow" data-aos="fade-up">
+<h3>1000+</h3>
+<p>Students Mentored</p>
+</div>
+<div class="card stat glow" data-aos="fade-up">
+<h3>1K+</h3>
+<p>YouTube Subscribers</p>
+</div>
+</div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact">
+<h2 data-aos="fade-up">Contact & Office</h2><br>
+<div class="card glow" data-aos="fade-up">
+<p>
+Office No. 420, Palaskheda, Aurangabad<br>
+📞 7387347679<br>
+✉ akashmr738@gmail.com
+</p>
+</div>
+</section>
+
 <footer>
-<p>
-📍 Plaskheda, Aurangabad, Maharashtra<br>
-Office No. 420, Behind Sant Tukaram Sabhagruh<br>
-⏰ Time: 7 AM – 8 PM
-</p>
-<p>
-📞 7387347679 | ✉ akashmr738@gmail.com
-</p>
-<p>
-📺 YouTube: <span>1K+ Subscribers</span> | 🎓 <span>1000+ Students Mentored</span>
-</p>
+<p>© 2026 The Power Of Trading | Akash Rajput</p>
 </footer>
 
-<script>
-// AUTO UPDATE DEMO DATA
-setInterval(()=>{
-document.getElementById("gold").innerText=(5800+Math.floor(Math.random()*100))
-document.getElementById("silver").innerText=(70+Math.random()*3).toFixed(2)
-},5000)
-</script>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>AOS.init({duration:1200,once:true});</script>
 
 </body>
 </html>
+
 
 
 
