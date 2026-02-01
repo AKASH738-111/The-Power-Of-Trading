@@ -1,135 +1,220 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="India’s Premium Stock & Forex Trading Education + Live FII & DII Data">
-  <meta property="og:title" content="The Power Of Trading | Premium Education with Live FII/DII Data">
-  <meta property="og:description" content="Learn trading + Track live FII/DII activity automatically.">
-  <title>The Power Of Trading | Premium Trading Education</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Power Of Trading</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
-  <style>
-    *{margin:0;padding:0;box-sizing:border-box}
-    body{font-family:'Inter',sans-serif;background:radial-gradient(circle at top,#0b1025,#02040a);color:#fff;overflow-x:hidden;}
-    section{padding:120px 8%;}
-    a{text-decoration:none;color:inherit;transition:.3s}
-    .btn{padding:16px 44px;border-radius:40px;background:linear-gradient(145deg,#f4c430,#f0b500);font-weight:700;color:#000;display:inline-block;box-shadow:0 8px 25px rgba(0,0,0,0.5);transition:.35s}
-    .btn:hover{transform:translateY(-6px) scale(1.03);box-shadow:0 35px 70px rgba(0,0,0,.7),0 0 15px #f4c430;}
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  font-family:'Inter',sans-serif;
+  background:radial-gradient(circle at top,#0b1025,#02040a);
+  color:#fff;
+}
+section{padding:120px 8%}
+h2{font-family:'Playfair Display',serif}
+.card{
+  background:linear-gradient(180deg,#0e1435,#050817);
+  border-radius:28px;
+  padding:50px;
+  box-shadow:0 30px 80px rgba(0,0,0,.7);
+}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:40px}
+.btn{
+  padding:14px 40px;
+  background:#f4c430;
+  color:#000;
+  border-radius:40px;
+  font-weight:700;
+  display:inline-block;
+}
+header{
+  position:fixed;top:0;width:100%;
+  background:rgba(2,4,10,.7);
+  backdrop-filter:blur(18px);
+  z-index:999;
+}
+.nav{
+  max-width:1400px;margin:auto;
+  padding:20px;
+  display:flex;justify-content:space-between;align-items:center;
+}
+.logo{font-size:40px;color:#f4c430;font-weight:800;font-family:'Playfair Display'}
+.nav ul{list-style:none;display:flex;gap:30px}
+.hero{
+  min-height:100vh;
+  display:flex;align-items:center;
+  position:relative;
+}
+.hero::before{
+  content:'';position:absolute;inset:0;
+  background:url('https://images.unsplash.com/photo-1640340434855-6084e0f04a2f') center/cover;
+  opacity:.25;
+}
+.hero-content{position:relative;max-width:850px}
+.hero h1{font-size:70px;margin-bottom:20px}
+.hero p{font-size:20px;opacity:.9;margin-bottom:40px}
 
-    header{position:fixed;top:0;width:100%;background:rgba(2,4,10,0.85);backdrop-filter:blur(20px);z-index:1000;}
-    .nav{max-width:1400px;margin:auto;display:flex;justify-content:space-between;align-items:center;padding:22px 30px;}
-    .logo{font-family:'Playfair Display',serif;color:#f4c430;font-size:46px;font-weight:800;display:flex;gap:14px;align-items:center;}
-    .nav ul{display:flex;gap:36px;list-style:none;font-size:15px;}
-    .nav ul li{cursor:pointer;opacity:.8;transition:.3s;}
-    .nav ul li:hover{opacity:1;}
-    .hamburger{display:none;flex-direction:column;cursor:pointer;gap:6px;}
-    .hamburger div{width:28px;height:3px;background:#f4c430;border-radius:2px;}
+/* Premium Glow */
+.glow{
+  border:1px solid rgba(244,196,48,.3);
+  box-shadow:0 0 30px rgba(244,196,48,.25);
+}
 
-    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:46px;}
-    .card{background:linear-gradient(180deg,#0e1435,#050817);border-radius:28px;padding:50px;box-shadow:0 35px 90px rgba(0,0,0,.7);transition:.4s;}
-    .card:hover{transform:translateY(-6px);box-shadow:0 45px 100px rgba(0,0,0,.85),0 0 18px #f4c430;}
+/* Review Cards */
+.review{
+  font-size:15px;
+  line-height:1.7;
+  opacity:.9;
+}
+.review span{
+  display:block;
+  margin-top:15px;
+  font-weight:600;
+  color:#f4c430;
+}
 
-    iframe{width:100%;border:none;border-radius:18px;}
+/* Price Box */
+.price-box{
+  text-align:center;
+  font-size:22px;
+}
+.price-box h3{color:#f4c430;font-size:34px}
 
-    @media(max-width:900px){
-      .nav ul{display:none;}
-      .hamburger{display:flex;}
-    }
-  </style>
+/* Footer */
+footer{background:#02030a;padding:100px 8%}
+</style>
 </head>
 
 <body>
 
 <header>
-  <div class="nav">
-    <div class="logo"><i class="fa-solid fa-bull"></i>The Power Of Trading</div>
-    <ul>
-      <li onclick="document.getElementById('hero').scrollIntoView({behavior:'smooth'})">Home</li>
-      <li onclick="document.getElementById('learn').scrollIntoView({behavior:'smooth'})">Courses</li>
-      <li onclick="document.getElementById('indicator').scrollIntoView({behavior:'smooth'})">Indicator</li>
-      <li onclick="document.getElementById('interactive-market').scrollIntoView({behavior:'smooth'})">Live Market</li>
-      <li onclick="document.getElementById('fii-dii').scrollIntoView({behavior:'smooth'})">FII / DII</li>
-      <li onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Contact</li>
-    </ul>
-    <div class="hamburger" onclick="toggleNav()"><div></div><div></div><div></div></div>
-  </div>
+<div class="nav">
+<div class="logo"><i class="fa-solid fa-bull"></i> The Power Of Trading</div>
+<ul>
+<li>Home</li><li>Courses</li><li>Indicator</li><li>Reviews</li><li>Contact</li>
+</ul>
+</div>
 </header>
 
-<section class="hero" id="hero">
-  <div data-aos="fade-up" style="text-align:center;">
-    <h1>India’s Premium Stock & Forex Trading Education</h1>
-    <p>Learn from scratch + Track live institutional activity automatically.</p>
-    <a class="btn" href="https://forms.gle/yourformlink" target="_blank">Enroll Now</a>
-  </div>
+<!-- HERO -->
+<section class="hero">
+<div class="hero-content" data-aos="fade-up">
+<h1>India’s Most Trusted Trading Education Platform</h1>
+<p>Built for serious traders who want consistency, discipline and long-term profitability.</p>
+<a class="btn">Enroll Now</a>
+</div>
 </section>
 
-<section id="learn">
-  <h2 data-aos="fade-up">Learn Trading From Absolute Zero</h2>
-  <p>Step-by-step guidance to trade like a professional.</p>
-  <div class="card" data-aos="fade-up"><p>Comprehensive mentorship covering basics to advanced strategies, risk management and live market experience.</p></div>
+<!-- ABOUT (EXPANDED) -->
+<section>
+<h2 data-aos="fade-up">About The Power Of Trading</h2>
+<br>
+<div class="card glow" data-aos="fade-up">
+<p>
+<b>The Power Of Trading</b> is not just a trading institute — it is a complete mindset transformation platform.
+Our mission is to convert beginners into disciplined, professional traders who understand market psychology,
+institutional money flow, risk management and consistency.
+<br><br>
+Founded by <b>Akash Rajput</b>, a trader with over <b>7+ years of real market experience</b>,
+this platform focuses on logic-based trading rather than gambling.
+<br><br>
+Students are trained deeply in:
+<ul>
+<li>✔ Market Structure & Institutional Footprints</li>
+<li>✔ Price Action & Candlestick Psychology</li>
+<li>✔ Risk Management & Capital Protection</li>
+<li>✔ Emotional Discipline & Trader Psychology</li>
+<li>✔ Live Market Execution Framework</li>
+</ul>
+<br>
+Our belief is simple: <b>One good trade system + discipline = financial freedom.</b>
+</p>
+</div>
 </section>
 
-<section id="interactive-market">
-  <h2 data-aos="fade-up">Live Market Interaction</h2>
-  <div class="grid">
-    <div class="card" data-aos="zoom-in"><h3>NIFTY 50 Live</h3><iframe src="https://s.tradingview.com/widgetembed/?symbol=NSE:NIFTY&theme=dark" height="320"></iframe></div>
-    <div class="card" data-aos="zoom-in"><h3>BANK NIFTY Live</h3><iframe src="https://s.tradingview.com/widgetembed/?symbol=NSE:BANKNIFTY&theme=dark" height="320"></iframe></div>
-    <div class="card" data-aos="zoom-in"><h3>EUR/USD</h3><iframe src="https://s.tradingview.com/widgetembed/?symbol=FX:EURUSD&theme=dark" height="320"></iframe></div>
-  </div>
+<!-- FII DII DATA -->
+<section>
+<h2 data-aos="fade-up">FII / DII Daily Activity</h2>
+<br>
+<div class="grid">
+<div class="card glow" data-aos="fade-right">
+<h3>Foreign Institutional Investors (FII)</h3>
+<p id="fii">Loading...</p>
+</div>
+<div class="card glow" data-aos="fade-left">
+<h3>Domestic Institutional Investors (DII)</h3>
+<p id="dii">Loading...</p>
+</div>
+</div>
 </section>
 
-<section id="fii-dii">
-  <h2 data-aos="fade-up">Live FII & DII Institutional Activity</h2>
-  <p data-aos="fade-up">Daily updated net buy/sell figures for Foreign & Domestic Institutional Investors. Data updates automatically from trusted financial sources. :contentReference[oaicite:2]{index=2}</p>
+<!-- STUDENT REVIEWS + GOLD SILVER -->
+<section>
+<h2 data-aos="fade-up">Student Reviews & Market Snapshot</h2>
+<br>
+<div class="grid">
 
-  <!-- LIVE FII / DII DATA IFRAME (Auto Updating) -->
-  <div class="card" data-aos="fade-up" style="padding:0;">
-    <iframe src="https://www.fundata.in/FIIDII.html" height="450"></iframe>
-  </div>
+<div class="card review glow" data-aos="zoom-in">
+"System bahut solid hai, emotions control me aaye."
+<span>– Purvesh Shevgan, Maharashtra</span>
+</div>
+
+<div class="card review glow" data-aos="zoom-in">
+"Loss kam aur confidence high hua."
+<span>– Pawan Kotwal, Maharashtra</span>
+</div>
+
+<div class="card review glow" data-aos="zoom-in">
+"Proper structure ke sath trading sikhi."
+<span>– Avanish Singh, Uttar Pradesh</span>
+</div>
+
+<div class="card review glow" data-aos="zoom-in">
+"Real institutional concept clear hua."
+<span>– Naresh, Karnataka</span>
+</div>
+
+<div class="card review glow" data-aos="zoom-in">
+"Discipline aur patience develop hua."
+<span>– Shubham, Uttar Pradesh</span>
+</div>
+
+<div class="card review glow" data-aos="zoom-in">
+"Trading ko business jaisa treat karna sikha."
+<span>– Suraj Rajput, Sambhaji Nagar, Maharashtra</span>
+</div>
+
+<div class="card price-box glow" data-aos="fade-up">
+<h3>Gold</h3>
+<p id="gold">$5893</p>
+</div>
+
+<div class="card price-box glow" data-aos="fade-up">
+<h3>Silver</h3>
+<p id="silver">$72.40</p>
+</div>
+
+</div>
 </section>
 
-<section id="indicator">
-  <h2 data-aos="fade-up">Trading With Akash Indicator</h2>
-  <div class="card" data-aos="fade-up"><iframe src="https://s.tradingview.com/embed-widget/advanced-chart/?symbol=NSE:NIFTY"></iframe></div>
-</section>
-
-<footer id="contact">
-  <p>Office No. 320, Palaskheda, Maharashtra</p>
+<footer>
+<p>© 2026 The Power Of Trading | All Rights Reserved</p>
 </footer>
 
 <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 <script>
-  AOS.init({duration:1200,once:true});
-  function toggleNav(){
-    const ul = document.querySelector('.nav ul');
-    ul.style.display = ul.style.display==='flex'?'none':'flex';
-  }
+AOS.init({duration:1200,once:true});
+
+/* SIMPLE AUTO DATA (DEMO – DAILY CHANGE POSSIBLE) */
+document.getElementById("fii").innerText="Net Buy : ₹ +2,145 Cr";
+document.getElementById("dii").innerText="Net Sell : ₹ -1,320 Cr";
 </script>
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
