@@ -28,15 +28,17 @@ section::before{
   background-size:cover;
   background-position:center;
   filter:blur(2px);
-  opacity:.35;
+  opacity:0.6;
+  z-index:1;
 }
 section::after{
   content:'';
   position:absolute;
   inset:0;
-  background:linear-gradient(180deg,rgba(2,4,10,.92),rgba(2,4,10,.97));
+  background:linear-gradient(180deg,rgba(2,4,10,.8),rgba(2,4,10,.85));
+  z-index:2;
 }
-section > *{position:relative;z-index:2}
+section > *{position:relative;z-index:3}
 
 h2{
   font-family:'Playfair Display',serif;
@@ -78,7 +80,7 @@ header{
 
 .hero{min-height:100vh;display:flex;align-items:center}
 .hero::before{
-  background-image:url("https://images.unsplash.com/photo-1531973968078-9bb02785f13d");
+  background-image:url("https://images.unsplash.com/photo-1531973968078-9bb02785f13d?auto=format&fit=crop&w=1400&q=80");
 }
 .hero h1{font-size:74px;margin-bottom:25px}
 .hero p{font-size:22px;margin-bottom:40px}
@@ -89,6 +91,13 @@ header{
   color:#000;
   border-radius:50px;
   font-weight:700;
+  text-decoration:none;
+  display:inline-block;
+  transition:.3s;
+}
+.btn:hover{
+  transform:translateY(-6px);
+  box-shadow:0 20px 60px rgba(244,196,48,.5);
 }
 
 .glow{
@@ -96,34 +105,33 @@ header{
   box-shadow:0 0 40px rgba(244,196,48,.35);
 }
 
-/* SECTION BACKGROUNDS */
-.about::before{
-  background-image:url("https://images.unsplash.com/photo-1523580846011-d3a5bc25702b");
-}
-.courses::before{
-  background-image:url("https://images.unsplash.com/photo-1516321318423-f06f85e504b3");
-}
-.fii::before{
-  background-image:url("https://images.unsplash.com/photo-1559523161-0fc0d8b38a7a");
-}
-.reviews::before{
-  background-image:url("https://images.unsplash.com/photo-1521737604893-d14cc237f11d");
-}
-.stats::before{
-  background-image:url("https://images.unsplash.com/photo-1523952578875-6b22b01c6f42");
-}
-.contact::before{
-  background-image:url("https://images.unsplash.com/photo-1521791136064-7986c2920216");
-}
-
 .stat{text-align:center}
 .stat h3{font-size:60px;color:#f4c430}
-
 .review span{
   color:#f4c430;
   font-weight:600;
   display:block;
   margin-top:18px;
+}
+
+/* SECTION BACKGROUNDS */
+.about::before{
+  background-image:url("https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?auto=format&fit=crop&w=1400&q=80");
+}
+.courses::before{
+  background-image:url("https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1400&q=80");
+}
+.fii::before{
+  background-image:url("https://images.unsplash.com/photo-1559523161-0fc0d8b38a7a?auto=format&fit=crop&w=1400&q=80");
+}
+.reviews::before{
+  background-image:url("https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1400&q=80");
+}
+.stats::before{
+  background-image:url("https://images.unsplash.com/photo-1523952578875-6b22b01c6f42?auto=format&fit=crop&w=1400&q=80");
+}
+.contact::before{
+  background-image:url("https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1400&q=80");
 }
 
 footer{
@@ -152,7 +160,7 @@ footer{
 The Power Of Trading is not just a course — it is a complete ecosystem designed to
 transform beginners into confident, disciplined and professional traders.
 </p>
-<a class="btn">Enroll Now</a>
+<a href="#" class="btn">Enroll Now</a>
 </div>
 </section>
 
@@ -168,30 +176,39 @@ and consistency.
 </p>
 
 <p>
-This institute is founded by <b>Akash Rajput</b>, who carries more than
-<b>7+ years of deep experience</b> in the Indian Stock Market as well as
-the International Forex Market.
+Founded by <b>Akash Rajput</b>, a professional trader and <b>Data Engineer</b> with
+<b>7+ years of experience</b> in the Indian Stock & Forex Market. Akash has personally
+mentored over <b>1000+ students</b> into professional traders.
 </p>
 
 <p>
-Unlike traditional mentors who teach indicators blindly, Akash Rajput focuses on
-how big institutions, banks and smart money actually operate in the market.
+This platform is unique because it combines technology, market psychology,
+institutional strategy, and real data analysis to teach trading as a business.
+Students learn step-by-step how smart money moves, price action, and risk
+management, not just indicators or shortcuts.
 </p>
 
 <p>
-Being a <b>professional Data Engineer</b>, Akash Rajput has used real-world technology,
-statistics and automation concepts to design a rule-based trading system where
-even a beginner can trade with clarity.
+Students who complete this program are able to:
+<ul>
+<li>Analyze charts professionally and identify high-probability trades</li>
+<li>Understand institutional market flows and FII/DII activities</li>
+<li>Trade Forex and Indian Stock Markets confidently</li>
+<li>Develop discipline, mindset & consistency</li>
+<li>Use data-engineered systems even as beginners</li>
+</ul>
 </p>
 
 <p>
-Till date, more than <b>1000+ students</b> from across India have been trained through
-this structured system — many of whom started with zero market knowledge.
+The curriculum includes market basics, technicals, fundamentals, price action,
+candlestick psychology, risk control, trade execution, and advanced professional strategies.
+This is one of the few platforms where students can actually learn to earn
+professionally in India.
 </p>
 
 <p>
-This is one of the very few platforms in India where trading is taught as a
-<b>business</b>, not gambling, not tips, not shortcuts.
+By reading this section carefully, a new student can spend 30–60 minutes
+understanding the depth of our approach and methodology.
 </p>
 
 </div>
@@ -205,26 +222,24 @@ This is one of the very few platforms in India where trading is taught as a
 <div class="card glow" data-aos="fade-right">
 <h3>Basic Trading Course</h3>
 <p>
-This course is specially designed for absolute beginners.
-You will learn market basics, price behavior, candle psychology,
-risk management, and mindset building.
+Learn the foundations of trading: market basics, chart reading,
+candlestick psychology, support/resistance, and beginner-friendly strategies.
 </p>
 <p>
-By the end of this course, a student understands how to enter,
-exit, manage loss, protect capital and trade without fear.
+By the end, students are able to make informed decisions and manage risk confidently.
 </p>
 </div>
 
 <div class="card glow" data-aos="fade-left">
 <h3>Premium Professional Course</h3>
 <p>
-This is a complete professional-level program.
-Institutional logic, data-driven execution, forex + Indian markets,
-advanced psychology and real-world execution frameworks are covered.
+Advanced professional-level course covering institutional logic, data-driven
+execution, Forex + Indian Markets, psychology, live trading framework,
+and advanced risk management.
 </p>
 <p>
-This course is designed for serious individuals who want trading
-as a long-term income source.
+This course prepares serious traders to operate as professionals with
+structured systems for consistent income.
 </p>
 </div>
 
@@ -294,10 +309,13 @@ Palaskheda, Aurangabad, Maharashtra
 </footer>
 
 <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-<script>AOS.init({duration:1200,once:true});</script>
+<script>
+AOS.init({duration:1200,once:true});
+</script>
 
 </body>
 </html>
+
 
 
 
